@@ -4,8 +4,8 @@ exe=$1
 db=$2
 out=$3
 
-stdAnts=100
-stdIt=500
+stdAnts=$4
+stdIt=$5
 stdEvapRate=0.05
 stdAlpha=1
 stdBeta=2
@@ -16,16 +16,16 @@ mkdir -p $out/evapRate
 mkdir -p $out/alpha
 mkdir -p $out/beta
 
-for numAnts in 25 50 75 100; do
-  for numIt in 50 150 300 500 1000; do
+for alpha in 1; do
+  for beta in {1..5..1}; do
     for seed in {1..20..1}; do
-      echo "$exe $db $numAnts $numIt 99999999 0 $stdEvapRate $stdAlpha $stdBeta $seed > $out/numAnts/${numAnts}_${numIt}_${seed}.log"
-      $exe $db $numAnts $numIt 99999999 0 $stdEvapRate $stdAlpha $stdBeta $seed > $out/numAnts/${numAnts}_${numIt}_${seed}.log
+      echo "$exe $db $stdAnts $stdIt 99999999 0 $stdEvapRate $alpha $beta $seed > $out/alpha/${alpha}_${beta}_${seed}.log"
+      time $exe $db $stdAnts $stdIt 99999999 0 $stdEvapRate $alpha $beta $seed > $out/alpha/${alpha}_${beta}_${seed}.log
     done
   
     echo "Agrupando resultados"
-    echo "python calcMean.py $out/numAnts ${numAnts}_${numIt} $numIt > $out/numAnts/media${numAnts}_${numIt}.log"
-    python calcMean.py $out/numAnts ${numAnts}_${numIt} $numIt > $out/numAnts/media${numAnts}_${numIt}.log
+    echo "python calcMean.py $out/numAnts ${alpha}_${beta} $stdIt > $out/alpha/media${alpha}_${beta}.log"
+    python calcMean.py $out/alpha ${alpha}_${beta} $stdIt > $out/alpha/media${alpha}_${beta}.log
   done;
 done
 
