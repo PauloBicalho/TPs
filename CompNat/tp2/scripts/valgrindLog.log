@@ -1,0 +1,360 @@
+==26238== Memcheck, a memory error detector
+==26238== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==26238== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==26238== Command: ../src/ACO_JSS ../testes/la40 100 500 99999999 0 0.7 2 4 20
+==26238== 
+Iteration: 0	1748	1748	1979.97	2544
+Iteration: 1	1691	1691	1982.96	2437
+Iteration: 2	1691	1725	2021.02	2628
+Iteration: 3	1680	1680	2116.4	2534
+Iteration: 4	1680	1720	2124.6	2846
+Iteration: 5	1680	1734	2189.91	2758
+Iteration: 6	1680	1823	2221.44	2777
+Iteration: 7	1680	1855	2282.36	3122
+Iteration: 8	1680	1854	2197.61	2653
+Iteration: 9	1680	1756	2215.43	2844
+Iteration: 10	1680	1698	2208.26	3108
+Iteration: 11	1680	1823	2292.64	3147
+Iteration: 12	1680	1807	2306.48	3238
+Iteration: 13	1680	1848	2317.6	3097
+Iteration: 14	1680	1798	2272.87	3286
+Iteration: 15	1680	1682	2242.67	3230
+Iteration: 16	1680	1721	2276.72	3052
+Iteration: 17	1680	1835	2320.08	3438
+Iteration: 18	1665	1665	2255.32	3158
+Iteration: 19	1665	1743	2183.51	3110
+Iteration: 20	1665	1774	2293.55	3481
+Iteration: 21	1665	1816	2284.3	3346
+Iteration: 22	1665	1707	2340.56	2950
+Iteration: 23	1665	1768	2300.26	2951
+Iteration: 24	1665	1726	2294.49	3121
+Iteration: 25	1665	1834	2273.92	2896
+Iteration: 26	1665	1815	2275.4	2956
+Iteration: 27	1665	1702	2219.18	3006
+Iteration: 28	1665	1811	2171.1	3426
+Iteration: 29	1665	1752	2218.32	2952
+Iteration: 30	1665	1842	2281.38	3592
+Iteration: 31	1665	1822	2238.51	2859
+Iteration: 32	1665	1767	2316.33	3210
+Iteration: 33	1665	1899	2362.86	3011
+Iteration: 34	1665	1781	2313.9	2894
+Iteration: 35	1665	1823	2223.06	2964
+Iteration: 36	1665	1672	2208.81	2838
+Iteration: 37	1665	1701	2234.04	2723
+Iteration: 38	1665	1771	2291.29	3045
+Iteration: 39	1665	1665	2277.55	3113
+Iteration: 40	1665	1731	2330.53	3259
+Iteration: 41	1665	1778	2239.49	2884
+Iteration: 42	1665	1884	2296.72	2896
+Iteration: 43	1665	1770	2253.47	2940
+Iteration: 44	1665	1818	2217.73	2872
+Iteration: 45	1665	1827	2308.42	3196
+Iteration: 46	1665	1747	2224.96	3009
+Iteration: 47	1665	1803	2335.09	3128
+Iteration: 48	1665	1756	2292.16	3203
+Iteration: 49	1665	1770	2262.6	2926
+Iteration: 50	1665	1735	2305.86	3040
+Iteration: 51	1665	1741	2245.67	3166
+Iteration: 52	1665	1696	2269.23	3298
+Iteration: 53	1665	1781	2258.88	3147
+Iteration: 54	1595	1595	2238.93	3141
+Iteration: 55	1595	1787	2309.03	3127
+Iteration: 56	1595	1734	2268.33	2954
+Iteration: 57	1595	1724	2319.14	3130
+Iteration: 58	1595	1808	2356.94	3052
+Iteration: 59	1595	1688	2302.99	2985
+Iteration: 60	1595	1681	2180.05	2810
+Iteration: 61	1595	1768	2208.04	3323
+Iteration: 62	1595	1651	2270.43	3049
+Iteration: 63	1595	1806	2289.9	3299
+Iteration: 64	1595	1695	2280.15	2989
+Iteration: 65	1595	1703	2291.27	3001
+Iteration: 66	1595	1778	2308.88	3380
+Iteration: 67	1595	1802	2227.29	3043
+Iteration: 68	1595	1711	2236.16	2928
+Iteration: 69	1595	1713	2241.54	2897
+Iteration: 70	1595	1687	2210.46	2777
+Iteration: 71	1595	1762	2228.59	3111
+Iteration: 72	1595	1811	2275.59	2861
+Iteration: 73	1595	1782	2258.35	3130
+Iteration: 74	1595	1809	2323.42	3011
+Iteration: 75	1595	1803	2253.77	3320
+Iteration: 76	1595	1641	2268.38	2805
+Iteration: 77	1595	1712	2267.67	3086
+Iteration: 78	1595	1799	2232.2	2902
+Iteration: 79	1595	1811	2306.71	3086
+Iteration: 80	1595	1824	2263.13	3051
+Iteration: 81	1595	1783	2278.34	3274
+Iteration: 82	1595	1839	2238.61	3064
+Iteration: 83	1595	1768	2316	3254
+Iteration: 84	1595	1783	2303.79	3227
+Iteration: 85	1595	1780	2309.84	2901
+Iteration: 86	1595	1708	2321.69	3550
+Iteration: 87	1595	1827	2245.31	2954
+Iteration: 88	1595	1762	2271.08	2890
+Iteration: 89	1595	1825	2244.3	3122
+Iteration: 90	1595	1832	2250.43	3063
+Iteration: 91	1595	1653	2242.24	3011
+Iteration: 92	1595	1869	2303.89	3499
+Iteration: 93	1595	1736	2276.71	3113
+Iteration: 94	1595	1673	2277.51	2964
+Iteration: 95	1595	1759	2293.07	3445
+Iteration: 96	1595	1834	2318.86	3131
+Iteration: 97	1595	1753	2306.26	3102
+Iteration: 98	1595	1783	2253.93	2885
+Iteration: 99	1595	1812	2276.61	3147
+Iteration: 100	1595	1698	2227.69	2860
+Iteration: 101	1595	1769	2309.3	2971
+Iteration: 102	1595	1784	2278.37	3252
+Iteration: 103	1595	1863	2365.12	3356
+Iteration: 104	1595	1838	2331.77	3118
+Iteration: 105	1595	1694	2306.29	3084
+Iteration: 106	1595	1795	2332.66	2955
+Iteration: 107	1595	1791	2282.25	3169
+Iteration: 108	1595	1865	2295.11	3202
+Iteration: 109	1595	1769	2240.98	3117
+Iteration: 110	1595	1775	2231.51	3313
+Iteration: 111	1595	1789	2237.96	2907
+Iteration: 112	1595	1847	2314.1	2864
+Iteration: 113	1595	1753	2249.76	3179
+Iteration: 114	1595	1819	2265.12	3001
+Iteration: 115	1595	1793	2292.34	3315
+Iteration: 116	1595	1801	2278.27	2926
+Iteration: 117	1595	1775	2224.55	3004
+Iteration: 118	1595	1606	2331.66	3121
+Iteration: 119	1595	1751	2309.82	3261
+Iteration: 120	1595	1797	2227.08	3046
+Iteration: 121	1595	1726	2211.95	2877
+Iteration: 122	1595	1786	2254.18	2994
+Iteration: 123	1595	1862	2326.38	3053
+Iteration: 124	1595	1880	2335.41	3375
+Iteration: 125	1595	1730	2239.34	2974
+Iteration: 126	1595	1773	2318.15	3175
+Iteration: 127	1595	1707	2292.53	2912
+Iteration: 128	1595	1715	2207.3	3030
+Iteration: 129	1595	1789	2226.85	3039
+Iteration: 130	1595	1723	2298.31	3263
+Iteration: 131	1595	1823	2361.44	3081
+Iteration: 132	1595	1792	2291.84	3320
+Iteration: 133	1595	1752	2282.22	3320
+Iteration: 134	1595	1671	2315.55	2975
+Iteration: 135	1595	1758	2299.79	3142
+Iteration: 136	1595	1774	2234.84	2811
+Iteration: 137	1595	1755	2255.89	2943
+Iteration: 138	1595	1710	2255.19	3037
+Iteration: 139	1595	1735	2258.36	2947
+Iteration: 140	1595	1907	2224.3	3123
+Iteration: 141	1595	1833	2337.92	3062
+Iteration: 142	1595	1813	2276.88	3075
+Iteration: 143	1595	1834	2248.73	3066
+Iteration: 144	1595	1769	2335.69	3107
+Iteration: 145	1595	1780	2316	2957
+Iteration: 146	1595	1789	2365.39	3209
+Iteration: 147	1595	1807	2254.82	2785
+Iteration: 148	1595	1882	2303.36	3461
+Iteration: 149	1595	1623	2253.81	3243
+Iteration: 150	1595	1812	2244.73	2958
+Iteration: 151	1595	1697	2289.76	2917
+Iteration: 152	1595	1762	2310.72	3402
+Iteration: 153	1595	1753	2198.97	2768
+Iteration: 154	1595	1699	2239.09	3039
+Iteration: 155	1595	1763	2297.92	3182
+Iteration: 156	1595	1703	2304.07	3085
+Iteration: 157	1595	1807	2293.29	3273
+Iteration: 158	1595	1775	2302.39	3012
+Iteration: 159	1595	1735	2184.25	2863
+Iteration: 160	1595	1770	2285.99	3025
+Iteration: 161	1595	1790	2316.43	3242
+Iteration: 162	1595	1799	2259.91	2945
+Iteration: 163	1595	1732	2306.75	3080
+Iteration: 164	1595	1689	2247.74	2851
+Iteration: 165	1595	1848	2275.06	3274
+Iteration: 166	1595	1812	2314.91	3058
+Iteration: 167	1595	1811	2212.15	2771
+Iteration: 168	1595	1825	2310.86	3088
+Iteration: 169	1595	1774	2311.03	3130
+Iteration: 170	1595	1793	2324.31	2968
+Iteration: 171	1595	1714	2230.64	3022
+Iteration: 172	1595	1857	2270.99	3006
+Iteration: 173	1595	1748	2238.42	2892
+Iteration: 174	1595	1792	2298.25	3406
+Iteration: 175	1595	1714	2318.39	3307
+Iteration: 176	1595	1832	2274.57	3230
+Iteration: 177	1595	1782	2282.63	3401
+Iteration: 178	1595	1765	2245.13	3326
+Iteration: 179	1595	1775	2302.73	3298
+Iteration: 180	1595	1862	2255.68	2852
+Iteration: 181	1595	1849	2247.69	2944
+Iteration: 182	1595	1773	2302.78	3047
+Iteration: 183	1595	1863	2276.59	3111
+Iteration: 184	1595	1659	2241.02	3148
+Iteration: 185	1595	1801	2287.94	2943
+Iteration: 186	1595	1840	2304.26	3085
+Iteration: 187	1595	1789	2293.26	3217
+Iteration: 188	1595	1754	2317.39	3594
+Iteration: 189	1595	1820	2292.72	3029
+Iteration: 190	1595	1798	2259.24	2954
+Iteration: 191	1595	1821	2314.98	2982
+Iteration: 192	1595	1839	2272.51	3025
+Iteration: 193	1595	1731	2265.43	3204
+Iteration: 194	1595	1736	2197.28	2695
+Iteration: 195	1595	1636	2295.59	3201
+Iteration: 196	1595	1691	2309.66	3251
+Iteration: 197	1595	1813	2317.75	3235
+Iteration: 198	1595	1790	2303.4	3241
+Iteration: 199	1595	1841	2323.29	3035
+Iteration: 200	1595	1735	2281.09	3173
+Iteration: 201	1595	1828	2328.65	3032
+Iteration: 202	1595	1786	2262.44	3189
+Iteration: 203	1595	1724	2249.8	2849
+Iteration: 204	1595	1815	2281.01	3018
+Iteration: 205	1595	1694	2257.24	3324
+Iteration: 206	1595	1760	2278.14	3016
+Iteration: 207	1595	1794	2281.9	3052
+Iteration: 208	1595	1748	2332.71	3106
+Iteration: 209	1595	1727	2251.98	2920
+Iteration: 210	1595	1776	2216.43	3278
+Iteration: 211	1595	1739	2281.07	3155
+Iteration: 212	1595	1844	2218.06	2703
+Iteration: 213	1595	1833	2275.19	2852
+Iteration: 214	1595	1710	2240.97	2997
+Iteration: 215	1595	1821	2287.71	2920
+Iteration: 216	1595	1803	2300.29	3223
+Iteration: 217	1595	1733	2251.92	2958
+Iteration: 218	1595	1737	2294.36	3088
+Iteration: 219	1595	1702	2225.83	3240
+Iteration: 220	1595	1828	2299.93	2942
+Iteration: 221	1595	1707	2255.75	2978
+Iteration: 222	1595	1706	2218.61	2895
+Iteration: 223	1595	1701	2302.16	3016
+Iteration: 224	1595	1710	2243.4	3164
+Iteration: 225	1595	1730	2295.53	2870
+Iteration: 226	1595	1718	2270.05	3522
+Iteration: 227	1595	1701	2360.11	3053
+Iteration: 228	1595	1645	2249.19	3258
+Iteration: 229	1595	1751	2293.21	3198
+Iteration: 230	1595	1813	2217.84	2908
+Iteration: 231	1595	1809	2279.99	3292
+Iteration: 232	1595	1834	2341.34	2983
+Iteration: 233	1595	1685	2296.55	3353
+Iteration: 234	1595	1671	2299.51	3048
+Iteration: 235	1595	1763	2271.17	3016
+Iteration: 236	1595	1628	2288.25	2950
+Iteration: 237	1595	1685	2300.29	3026
+Iteration: 238	1595	1759	2200.06	3165
+Iteration: 239	1595	1788	2304.64	2995
+Iteration: 240	1595	1787	2281.07	2849
+Iteration: 241	1595	1838	2327.14	3084
+Iteration: 242	1595	1635	2261.41	3057
+Iteration: 243	1595	1752	2278.35	3258
+Iteration: 244	1595	1843	2246.28	3264
+Iteration: 245	1595	1663	2233.24	2884
+Iteration: 246	1595	1873	2321.33	3047
+Iteration: 247	1595	1676	2332.05	3069
+Iteration: 248	1595	1740	2263.05	3091
+Iteration: 249	1595	1900	2280.01	3139
+Iteration: 250	1595	1739	2242.9	3113
+Iteration: 251	1595	1763	2278.34	2961
+Iteration: 252	1595	1739	2246.55	3063
+Iteration: 253	1595	1792	2298.89	2949
+Iteration: 254	1595	1683	2295.44	3437
+Iteration: 255	1595	1782	2256.24	3077
+Iteration: 256	1595	1819	2246.5	2942
+Iteration: 257	1595	1632	2245.93	2907
+Iteration: 258	1595	1775	2273.91	2953
+Iteration: 259	1595	1787	2246	3113
+Iteration: 260	1595	1747	2237.4	3009
+Iteration: 261	1595	1677	2307.01	3321
+Iteration: 262	1595	1845	2335.55	3160
+Iteration: 263	1595	1809	2270.76	2907
+Iteration: 264	1595	1719	2271.66	3014
+Iteration: 265	1595	1776	2338.36	3008
+Iteration: 266	1595	1790	2293.67	2933
+Iteration: 267	1595	1807	2277.81	2970
+Iteration: 268	1595	1803	2241.78	2834
+Iteration: 269	1595	1703	2251.28	3057
+Iteration: 270	1595	1831	2240.12	3043
+Iteration: 271	1595	1657	2326.51	2957
+Iteration: 272	1595	1752	2293.59	3334
+Iteration: 273	1595	1806	2287.14	2984
+Iteration: 274	1595	1792	2314.84	2920
+Iteration: 275	1595	1658	2294.37	3148
+Iteration: 276	1595	1724	2293.19	2976
+Iteration: 277	1595	1794	2224.87	3238
+Iteration: 278	1595	1730	2271.22	3130
+Iteration: 279	1595	1717	2284.27	3016
+Iteration: 280	1595	1782	2242.37	2840
+Iteration: 281	1595	1826	2270.43	3979
+Iteration: 282	1595	1732	2373.27	3041
+Iteration: 283	1595	1796	2279.95	3113
+Iteration: 284	1595	1668	2287	3292
+Iteration: 285	1595	1750	2307.47	3078
+Iteration: 286	1595	1731	2298.57	2997
+Iteration: 287	1595	1739	2296.23	2908
+Iteration: 288	1595	1826	2286.2	3411
+Iteration: 289	1595	1761	2178.02	3016
+Iteration: 290	1595	1667	2315.54	3104
+Iteration: 291	1595	1701	2278.22	3053
+Iteration: 292	1595	1692	2286.84	3299
+Iteration: 293	1595	1775	2232.95	2919
+Iteration: 294	1595	1652	2258.38	3003
+Iteration: 295	1595	1803	2262.13	2949
+Iteration: 296	1595	1690	2225.68	3205
+Iteration: 297	1595	1777	2243.17	3368
+Iteration: 298	1595	1796	2266.83	3139
+==26238== Invalid read of size 4
+==26238==    at 0x4021E1: ACO::getJobNextOperation(int) const (ACO.cpp:73)
+==26238==    by 0x4028F9: ACO::nextIteration(int) (ACO.cpp:231)
+==26238==    by 0x402E79: ACO::execute() (ACO.cpp:325)
+==26238==    by 0x401056: main (in /home/speed/p.bicalho/UFMG/TPs/CompNat/tp2/src/ACO_JSS)
+==26238==  Address 0x5a0766c is 4 bytes before a block of size 60 alloc'd
+==26238==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==26238==    by 0x4061E3: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:92)
+==26238==    by 0x4056A0: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/speed/p.bicalho/UFMG/TPs/CompNat/tp2/src/ACO_JSS)
+==26238==    by 0x40447B: int* std::vector<int, std::allocator<int> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > > >(unsigned long, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >) (stl_vector.h:1052)
+==26238==    by 0x4034E8: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) (vector.tcc:170)
+==26238==    by 0x402015: ACO::ACO(Constraints const&, int, int, double, double, double, double, double, int) (ACO.cpp:26)
+==26238==    by 0x401047: main (in /home/speed/p.bicalho/UFMG/TPs/CompNat/tp2/src/ACO_JSS)
+==26238== 
+==26238== Invalid read of size 8
+==26238==    at 0x4032D4: std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::operator[](unsigned long) const (stl_vector.h:711)
+==26238==    by 0x402F63: Constraints::getIdMachine(int, int) const (Constraints.h:25)
+==26238==    by 0x402917: ACO::nextIteration(int) (ACO.cpp:233)
+==26238==    by 0x402E79: ACO::execute() (ACO.cpp:325)
+==26238==    by 0x401056: main (in /home/speed/p.bicalho/UFMG/TPs/CompNat/tp2/src/ACO_JSS)
+==26238==  Address 0x5a05c58 is not stack'd, malloc'd or (recently) free'd
+==26238== 
+==26238== Invalid read of size 4
+==26238==    at 0x402F64: Constraints::getIdMachine(int, int) const (Constraints.h:25)
+==26238==    by 0x402917: ACO::nextIteration(int) (ACO.cpp:233)
+==26238==    by 0x402E79: ACO::execute() (ACO.cpp:325)
+==26238==    by 0x401056: main (in /home/speed/p.bicalho/UFMG/TPs/CompNat/tp2/src/ACO_JSS)
+==26238==  Address 0xfffffffffffffff8 is not stack'd, malloc'd or (recently) free'd
+==26238== 
+==26238== 
+==26238== Process terminating with default action of signal 11 (SIGSEGV)
+==26238==  Access not within mapped region at address 0xFFFFFFFFFFFFFFF8
+==26238==    at 0x402F64: Constraints::getIdMachine(int, int) const (Constraints.h:25)
+==26238==    by 0x402917: ACO::nextIteration(int) (ACO.cpp:233)
+==26238==    by 0x402E79: ACO::execute() (ACO.cpp:325)
+==26238==    by 0x401056: main (in /home/speed/p.bicalho/UFMG/TPs/CompNat/tp2/src/ACO_JSS)
+==26238==  If you believe this happened as a result of a stack
+==26238==  overflow in your program's main thread (unlikely but
+==26238==  possible), you can try to increase the size of the
+==26238==  main thread stack using the --main-stacksize= flag.
+==26238==  The main thread stack size used in this run was 8388608.
+==26238== 
+==26238== HEAP SUMMARY:
+==26238==     in use at exit: 445,116 bytes in 291 blocks
+==26238==   total heap usage: 41,158,024 allocs, 41,157,733 frees, 9,697,691,368 bytes allocated
+==26238== 
+==26238== LEAK SUMMARY:
+==26238==    definitely lost: 0 bytes in 0 blocks
+==26238==    indirectly lost: 0 bytes in 0 blocks
+==26238==      possibly lost: 0 bytes in 0 blocks
+==26238==    still reachable: 445,116 bytes in 291 blocks
+==26238==         suppressed: 0 bytes in 0 blocks
+==26238== Rerun with --leak-check=full to see details of leaked memory
+==26238== 
+==26238== For counts of detected and suppressed errors, rerun with: -v
+==26238== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 2 from 2)
