@@ -20,7 +20,7 @@ $(MAIN): $(OBJS)
 	$(CC) $(CFLAGS) $< -c 
 
 clean:
-	$(RM) $(MAINFB) $(MAINPD) *.o
+	$(RM) $(MAIN) *.o
 
 run: $(MAIN)
 	./$(MAIN) entrada_exemplo.txt

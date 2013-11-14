@@ -27,11 +27,9 @@ ACO::ACO(const Constraints &_cons, int numAnts, int maxIteration, double maxPh,
   this->totalOperations = this->numJobs * this->numOperations;
 
   this->grafo = std::vector< std::vector<double> > (this->totalOperations+1,
-      std::vector<double> (this->totalOperations+1,1/(double)this->totalOperations) );
+      std::vector<double> (this->totalOperations+1,50) );
 
-  std::cout << "\n---" <<  this->grafo[1][1] << "\n" <<  endl;
-  //this->cons.show();
-
+  //std::cout << "\n---" <<  this->grafo[1][1] << "\n" <<  endl;
   srand(seed);
 }
 
@@ -40,6 +38,7 @@ double ACO::getPh(int job1, int op1, int job2, int op2) const{
   int pos2 = (job2 * this->numOperations) + op2 + 1;
 
   return 1.0 / this->grafo[pos1][pos2];
+//  return this->grafo[pos1][pos2];
 }
 
 void ACO::increasePh(int job1, int op1, int job2, int op2, double delta){
@@ -47,20 +46,20 @@ void ACO::increasePh(int job1, int op1, int job2, int op2, double delta){
   int pos2 = (job2 * this->numOperations) + op2 +1;
 
   this->grafo[pos1][pos2] += delta;
-  this->grafo[pos2][pos1] += delta;
+  //this->grafo[pos2][pos1] += delta;
 
   if( this->grafo[pos1][pos2] > this->maxPh )
     this->grafo[pos1][pos2] = this->maxPh;
-  if( this->grafo[pos2][pos1] > this->maxPh )
-    this->grafo[pos2][pos1] = this->maxPh;
+  //if( this->grafo[pos2][pos1] > this->maxPh )
+  //  this->grafo[pos2][pos1] = this->maxPh;
 }
 
 void ACO::decreasePh(int job1, int op1, int job2, int op2, double delta){
   int pos1 = (job1 * this->numOperations) + op1 + 1;
   int pos2 = (job2 * this->numOperations) + op2 + 1;
 
-  this->grafo[pos1][pos2] += delta;
-  this->grafo[pos2][pos1] += delta;
+  this->grafo[pos1][pos2] *= delta;
+  this->grafo[pos2][pos1] *= delta;
   
   if( this->grafo[pos1][pos2] < this->minPh )
     this->grafo[pos1][pos2] += this->minPh;
@@ -112,17 +111,14 @@ std::vector<double> ACO::calcProbabilities(int currentJob,
 
   double acum = 0.0;
   for(int i=0; i<this->numJobs; i++){
-//    std::cout << "[" << aux[i] << "] ";
+//    std::cout << "[" << aux[i] << "-";
     double temp = aux[i] / sumProbs;
+//    std::cout << temp << "] ";  
     probs[i] = (acum + temp);
     acum += temp;
   }
-//  std::cout << "\n";
+//  std::cout << "\n\n";
   
-//  for(int i=0; i<this->numJobs; i++)
-//    std::cout << "[" << probs[i] << "] ";
-//  std::cout << "\n";
-
   return probs;
 }
 
@@ -130,19 +126,15 @@ std::vector<double> ACO::calcProbabilities(int currentJob,
 int ACO::getWinnerJob(const std::vector<double> probs) const{
   double r = rand() / double(RAND_MAX);
 
-//  std::cout << r << " - ";
-
-  
   for(int i=0; i<this->numJobs; i++){
     if( r <= probs[i] ){
-//      std::cout << i << "\n\n";
       return i;
     }
   }
   return -1;
 }
 
-int ACO::evaluatePath( const std::vector< std::pair<int,int> > path ) const{
+/*int ACO::evaluatePath( const std::vector< std::pair<int,int> > path ) const{
   int makespan = 0;
 
   std::vector<int> machineTime (this->numMachines, 0 );
@@ -173,7 +165,7 @@ int ACO::evaluatePath( const std::vector< std::pair<int,int> > path ) const{
   }
 
   return makespan;
-}
+}*/
 
 void ACO::updatePh( const std::vector< std::pair<int,int> > path, int makespan ) {
 
@@ -186,7 +178,8 @@ void ACO::updatePh( const std::vector< std::pair<int,int> > path, int makespan )
     int nextJob = it->first;
     int nextJobOperation = it->second;
 
-    double delta = this->alpha * (double) makespan;
+    double delta = .1 * (double) makespan;
+//    std::cout << "mk" << makespan <<  " inv " << delta << endl;
     //double delta = this->alpha * invMakespan;
 
     this->increasePh(currentJob, currentJobOperation, nextJob, nextJobOperation, delta);
@@ -212,10 +205,12 @@ void ACO::evaporatePh(){
 }
 
 void ACO::nextIteration(int k){
-  
-  std::vector< std::pair<int,Schedule> > paths; 
-  int bestMakespan = 99999999, bestAnt = -1;
+ 
+  double meanMakespan = .0;
 
+  std::vector< std::pair<int,Schedule> > paths; 
+  int bestMakespan = 999999999, bestAnt = -1;
+  int worstMakespan = 0.0, worstAnt = -1;
   for(int ant=0; ant< this->numAnts; ant++ ){
 //    std::cout << "+++ ANT " << ant << " ++++\n";
 
@@ -249,33 +244,55 @@ void ACO::nextIteration(int k){
     int makespan = currentSchedule.getMakespan();
     paths.push_back( std::make_pair (makespan, currentSchedule) );
 
+    meanMakespan += makespan;
+  
+    if( worstAnt == -1 || worstMakespan < makespan ){
+      worstAnt = ant;
+      worstMakespan = makespan;
+    }
+    
     if( bestAnt == -1 || bestMakespan > makespan ){
       bestAnt = ant;
       bestMakespan = makespan;
 
-      if( bestSchedule.getMakespan() == 0 || bestMakespan < bestSchedule.getMakespan() ){
+      if( bestSchedule.getMakespan() == 0 || bestMakespan < bestSchedule.getMakespan() )
         bestSchedule = currentSchedule ;
-      }
-
     }
   }
 
- // std::cout << "BestMakespan: " << bestMakespan << endl;
+// std::cout << "BestMakespan: " << bestMakespan << endl;
 
+//  if(k+1%100000 == 0){
 //  std::cout << "\n-------------------Grafo Antes ---------------------------\n";
 //  this->showGrafo();
 //  std::cout << "------------------------------------------------------------\n";
+//  }
 
   for(unsigned int i=0; i<paths.size(); i++)
     this->updatePh(paths[i].second.getPath(), paths[i].first);
+//    this->updatePh(paths[bestAnt].second.getPath(), bestMakespan);
   
+  this->updatePh(bestSchedule.getPath(),bestSchedule.getMakespan());
+  
+//  if(k+1%100000 == 0){
 //  std::cout << "\n-------------------Grafo Depois ---------------------------\n";
 //  this->showGrafo();
 //  std::cout << "------------------------------------------------------------\n";
-  
-  if( k % 100 == 0 )
-      std::cout << "BestMakespan " << k << ": " << paths[bestAnt].second.getMakespan() 
-       << "-" << this->getBestMakespan() << endl;
+//  }
+
+  meanMakespan /= (double) this->numAnts;
+  std::cout << "Iteration: " << k << "\t" << this->getBestMakespan() <<  "\t" << bestMakespan << "\t" << meanMakespan << "\t" << worstMakespan << endl;
+
+//  if( k % 10 == 0 ){
+//    mean /= (this->numAnts * 100.);
+    
+//    std::cout << "BestMakespan " << k << ": " << paths[bestAnt].second.getMakespan() 
+//       << "-" << this->getBestMakespan() << " || " << mean << endl;
+//    mean = 0.0;
+//    std::cout << "###################################\n";
+//    this->showGrafo();
+//    std::cout << "###################################\n";
+//  }
 
 
 //  for(unsigned i=0; i<paths[bestAnt].second.getPath().size(); i++)

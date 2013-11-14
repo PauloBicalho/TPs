@@ -21,15 +21,15 @@ int main(int argc, char *argv[]){
   double evaporateRate = atof(argv[6]);
   double alpha = atof(argv[7]);
   double beta = atof(argv[8]);
-  int seed = atoi(argv[8]);
+  int seed = atoi(argv[9]);
 
   const Constraints cons (fileName);
 
-  std::cout << maxPh << endl;
+//  std::cout << maxPh << endl;
   ACO aco (cons , numAnts, maxIterations, maxPh, minPh, evaporateRate, alpha, beta, seed );
 
   aco.execute();
-  std::cout << "BestMakespanEver: " << aco.getBestMakespan() << endl;
+//  std::cout << "BestMakespanEver: " << aco.getBestMakespan() << endl;
 
 //  Solution sol = aco.getBestSolution();
 
