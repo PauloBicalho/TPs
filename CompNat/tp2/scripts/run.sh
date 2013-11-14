@@ -19,12 +19,12 @@ mkdir -p $out/beta
 
   for seed in {1..20..1}; do
     echo "$exe $db $stdAnts $stdIt 99999999 0 $evapRate $stdAlpha $stdBeta $seed > $out/evapRate/${evapRate}_${seed}.log"
-    time $exe $db $stdAnts $stdIt 99999999 0 $evapRate $stdAlpha $stdBeta $seed > $out/evapRate/${evapRate}_${seed}.log
+    #time $exe $db $stdAnts $stdIt 99999999 0 $evapRate $stdAlpha $stdBeta $seed > $out/evapRate/${evapRate}_${seed}.log
   done
 
   echo "Agrupando resultados"
-  echo "python calcMean.py $out/numAnts ${evapRate} $stdIt > $out/evapRate/media${evapRate}.log"
-  python calcMean.py $out/numAnts ${evapRate} $stdIt > $out/evapRate/media${evapRate}.log
+  echo "python calcMean.py $out/evapRate ${evapRate} $stdIt > $out/evapRate/media${evapRate}.log"
+  python calcMean.py $out/evapRate ${evapRate} $stdIt > $out/evapRate/media${evapRate}.log
 
 
   echo ""
