@@ -1,0 +1,541 @@
+ --- COMPILANDO OBJETO "BealClient.o"
+echo g++ -Wall -g3 -lm -I ./boost -std=c++0x BealClient.cpp -c 
+g++ -Wall -g3 -lm -I ./boost -std=c++0x BealClient.cpp -c
+g++ -Wall -g3 -lm -I ./boost -std=c++0x BealClient.cpp -c 
+In file included from ./boost/boost/multiprecision/number.hpp:14:0,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/assert.hpp:102:11: error: ‘BOOST_NOINLINE’ does not name a type
+In file included from /usr/include/boost/format/alt_sstream.hpp:20:0,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from ./boost/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:30,
+                 from ./boost/boost/multiprecision/detail/default_ops.hpp:9,
+                 from ./boost/boost/multiprecision/detail/generic_interconvert.hpp:9,
+                 from ./boost/boost/multiprecision/number.hpp:22,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/utility/base_from_member.hpp:136:9: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+In file included from ./boost/boost/multiprecision/detail/number_base.hpp:17:0,
+                 from ./boost/boost/multiprecision/detail/default_ops.hpp:10,
+                 from ./boost/boost/multiprecision/detail/generic_interconvert.hpp:9,
+                 from ./boost/boost/multiprecision/number.hpp:22,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/lexical_cast.hpp:90:26: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:90:28: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:101:50: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:101:52: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:126:35: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:126:37: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:126:17: error: looser throw specifier for ‘virtual boost::bad_lexical_cast::~bad_lexical_cast()’
+/usr/include/c++/4.6/typeinfo:197:13: error:   overriding ‘virtual std::bad_cast::~bad_cast() throw ()’
+In file included from ./boost/boost/lexical_cast.hpp:158:0,
+                 from ./boost/boost/multiprecision/detail/number_base.hpp:17,
+                 from ./boost/boost/multiprecision/detail/default_ops.hpp:10,
+                 from ./boost/boost/multiprecision/detail/generic_interconvert.hpp:9,
+                 from ./boost/boost/multiprecision/number.hpp:22,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/array.hpp: In member function ‘T& boost::array<T, N>::operator[](boost::array<T, N>::size_type)’:
+./boost/boost/array.hpp:123:13: error: there are no arguments to ‘BOOST_LIKELY’ that depend on a template parameter, so a declaration of ‘BOOST_LIKELY’ must be available [-fpermissive]
+./boost/boost/array.hpp:123:13: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+./boost/boost/array.hpp:123:13: error: ‘assertion_failed_msg’ is not a member of ‘boost::assertion::detail’
+./boost/boost/array.hpp: In member function ‘const T& boost::array<T, N>::operator[](boost::array<T, N>::size_type) const’:
+./boost/boost/array.hpp:129:13: error: there are no arguments to ‘BOOST_LIKELY’ that depend on a template parameter, so a declaration of ‘BOOST_LIKELY’ must be available [-fpermissive]
+./boost/boost/array.hpp:129:13: error: ‘assertion_failed_msg’ is not a member of ‘boost::assertion::detail’
+In file included from ./boost/boost/multiprecision/detail/number_base.hpp:17:0,
+                 from ./boost/boost/multiprecision/detail/default_ops.hpp:10,
+                 from ./boost/boost/multiprecision/detail/generic_interconvert.hpp:9,
+                 from ./boost/boost/multiprecision/number.hpp:22,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/lexical_cast.hpp: At global scope:
+./boost/boost/lexical_cast.hpp:782:82: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:993:100: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1006:69: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1062:54: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1096:80: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1105:73: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1113:82: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1122:75: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1129:82: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1138:75: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1145:76: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1154:69: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp: In function ‘bool boost::detail::lcast_ret_float(T&, const CharT*, const CharT*)’:
+./boost/boost/lexical_cast.hpp:1409:50: error: ‘changesign’ is not a member of ‘boost::math’
+./boost/boost/lexical_cast.hpp: At global scope:
+./boost/boost/lexical_cast.hpp:1551:62: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1551:64: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1562:35: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1562:37: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1588:49: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1588:51: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1604:79: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1604:81: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1734:79: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1742:92: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1749:39: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1749:41: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1757:62: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1757:64: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1764:68: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1764:70: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1771:74: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1771:76: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1779:76: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1779:78: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1787:68: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1787:70: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1795:70: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:1795:72: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp:1860:66: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1864:74: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1868:72: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1872:72: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1876:80: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1880:78: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1885:64: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1892:72: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1896:70: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1900:70: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1907:78: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:1911:76: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:2092:48: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:2108:61: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:2127:59: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/lexical_cast.hpp:2151:41: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:2151:43: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/lexical_cast.hpp: In static member function ‘static bool boost::detail::lexical_stream_limited_src<CharT, Traits, RequiresStringbuffer>::shl_real_type(float, char*, char*&)’:
+./boost/boost/lexical_cast.hpp:1661:48: error: there are no arguments to ‘put_inf_nan’ that depend on a template parameter, so a declaration of ‘put_inf_nan’ must be available [-fpermissive]
+./boost/boost/lexical_cast.hpp: In static member function ‘static bool boost::detail::lexical_stream_limited_src<CharT, Traits, RequiresStringbuffer>::shl_real_type(double, char*, char*&)’:
+./boost/boost/lexical_cast.hpp:1675:48: error: there are no arguments to ‘put_inf_nan’ that depend on a template parameter, so a declaration of ‘put_inf_nan’ must be available [-fpermissive]
+./boost/boost/lexical_cast.hpp: In static member function ‘static bool boost::detail::lexical_stream_limited_src<CharT, Traits, RequiresStringbuffer>::shl_real_type(long double, char*, char*&)’:
+./boost/boost/lexical_cast.hpp:1689:48: error: there are no arguments to ‘put_inf_nan’ that depend on a template parameter, so a declaration of ‘put_inf_nan’ must be available [-fpermissive]
+./boost/boost/lexical_cast.hpp: In static member function ‘static bool boost::detail::lexical_stream_limited_src<CharT, Traits, RequiresStringbuffer>::shl_real_type(float, wchar_t*, wchar_t*&)’:
+./boost/boost/lexical_cast.hpp:1705:48: error: there are no arguments to ‘put_inf_nan’ that depend on a template parameter, so a declaration of ‘put_inf_nan’ must be available [-fpermissive]
+./boost/boost/lexical_cast.hpp: In static member function ‘static bool boost::detail::lexical_stream_limited_src<CharT, Traits, RequiresStringbuffer>::shl_real_type(double, wchar_t*, wchar_t*&)’:
+./boost/boost/lexical_cast.hpp:1716:48: error: there are no arguments to ‘put_inf_nan’ that depend on a template parameter, so a declaration of ‘put_inf_nan’ must be available [-fpermissive]
+./boost/boost/lexical_cast.hpp: In static member function ‘static bool boost::detail::lexical_stream_limited_src<CharT, Traits, RequiresStringbuffer>::shl_real_type(long double, wchar_t*, wchar_t*&)’:
+./boost/boost/lexical_cast.hpp:1724:48: error: there are no arguments to ‘put_inf_nan’ that depend on a template parameter, so a declaration of ‘put_inf_nan’ must be available [-fpermissive]
+./boost/boost/lexical_cast.hpp: At global scope:
+./boost/boost/lexical_cast.hpp:2387:76: error: expected ‘;’ at end of member declaration
+./boost/boost/lexical_cast.hpp:2387:78: error: ‘BOOST_NOEXCEPT’ does not name a type
+In file included from ./boost/boost/multiprecision/detail/default_ops.hpp:10:0,
+                 from ./boost/boost/multiprecision/detail/generic_interconvert.hpp:9,
+                 from ./boost/boost/multiprecision/number.hpp:22,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/detail/number_base.hpp:78:94: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/detail/number_base.hpp:83:65: error: expected initializer before ‘BOOST_NOEXCEPT’
+In file included from ./boost/boost/multiprecision/detail/default_ops.hpp:10:0,
+                 from ./boost/boost/multiprecision/detail/generic_interconvert.hpp:9,
+                 from ./boost/boost/multiprecision/number.hpp:22,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/detail/number_base.hpp:330:26: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:330:32: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:361:23: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:361:29: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:397:26: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:397:32: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:398:27: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:398:33: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:443:26: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:443:32: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:444:28: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:444:34: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:445:27: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:445:33: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:498:26: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:498:32: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:499:33: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:499:39: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:500:34: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:500:40: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp:501:27: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/detail/number_base.hpp:501:33: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/detail/number_base.hpp: In function ‘void boost::multiprecision::detail::format_float_string(S&, intmax_t, intmax_t, std::ios_base::fmtflags, bool)’:
+./boost/boost/multiprecision/detail/number_base.hpp:662:7: error: ‘boost::multiprecision::detail::abs’ has not been declared
+./boost/boost/multiprecision/detail/number_base.hpp: At global scope:
+./boost/boost/multiprecision/detail/number_base.hpp:703:67: error: expected initializer before ‘BOOST_NOEXCEPT’
+In file included from ./boost/boost/multiprecision/traits/explicit_conversion.hpp:11:0,
+                 from ./boost/boost/multiprecision/traits/is_restricted_conversion.hpp:10,
+                 from ./boost/boost/multiprecision/number.hpp:24,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/utility/declval.hpp:40:54: error: expected initializer before ‘BOOST_NOEXCEPT’
+In file included from ./boost/boost/multiprecision/traits/is_restricted_conversion.hpp:10:0,
+                 from ./boost/boost/multiprecision/number.hpp:24,
+                 from ./boost/boost/multiprecision/cpp_int.hpp:12,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/traits/explicit_conversion.hpp:58:76: error: ‘declval’ was not declared in this scope
+./boost/boost/multiprecision/traits/explicit_conversion.hpp:58:76: note: suggested alternative:
+/usr/include/c++/4.6/type_traits:1132:5: note:   ‘std::declval’
+./boost/boost/multiprecision/traits/explicit_conversion.hpp:58:91: error: template argument 1 is invalid
+In file included from ./boost/boost/multiprecision/cpp_int.hpp:12:0,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/number.hpp:43:48: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:43:68: error: expected identifier before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:43:68: error: expected ‘,’ or ‘...’ before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:43:87: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/number.hpp:44:63: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:44:83: error: expected identifier before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:44:83: error: expected ‘,’ or ‘...’ before ‘noexcept’
+In file included from ./boost/boost/multiprecision/cpp_int.hpp:12:0,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/number.hpp:44:154: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/number.hpp:44:65: error: ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’ cannot be overloaded
+./boost/boost/multiprecision/number.hpp:43:50: error: with ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’
+./boost/boost/multiprecision/number.hpp:92:7: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/number.hpp:97:7: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/number.hpp:114:24: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/number.hpp:145:58: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:146:25: error: expected identifier before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:146:25: error: expected ‘,’ or ‘...’ before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:146:113: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/number.hpp:146:7: error: ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’ cannot be overloaded
+./boost/boost/multiprecision/number.hpp:43:50: error: with ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’
+./boost/boost/multiprecision/number.hpp:155:7: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/number.hpp:162:7: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/number.hpp:192:58: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:193:25: error: expected identifier before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:193:25: error: expected ‘,’ or ‘...’ before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:193:67: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/number.hpp:193:7: error: ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’ cannot be overloaded
+./boost/boost/multiprecision/number.hpp:43:50: error: with ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’
+./boost/boost/multiprecision/number.hpp:195:53: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:195:55: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:544:51: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:544:53: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:641:38: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:641:40: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:649:24: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:649:30: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:660:83: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:661:25: error: expected identifier before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:661:25: error: expected ‘,’ or ‘...’ before ‘noexcept’
+./boost/boost/multiprecision/number.hpp:661:91: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/number.hpp:661:7: error: ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’ cannot be overloaded
+./boost/boost/multiprecision/number.hpp:43:50: error: with ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’
+./boost/boost/multiprecision/number.hpp:673:42: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:673:44: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:677:65: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:677:71: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:1569:63: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1574:84: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1579:84: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1585:84: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1593:84: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1605:73: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1610:94: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1615:92: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1621:77: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1622:79: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:1622:85: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:1624:100: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:1624:102: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:1626:88: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1628:126: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1630:160: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1638:97: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:1638:99: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/number.hpp:1640:99: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1643:35: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1646:35: error: expected initializer before ‘BOOST_NOEXCEPT’
+./boost/boost/multiprecision/number.hpp:1647:123: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/number.hpp:1647:125: error: ‘BOOST_NOEXCEPT’ does not name a type
+In file included from ./boost/boost/multiprecision/cpp_int.hpp:12:0,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/number.hpp: In member function ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’:
+./boost/boost/multiprecision/number.hpp:43:90: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from ./boost/boost/multiprecision/cpp_int.hpp:12:0,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/number.hpp: In member function ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’:
+./boost/boost/multiprecision/number.hpp:44:158: error: only constructors take member initializers
+./boost/boost/multiprecision/number.hpp:44:168: error: ‘e’ was not declared in this scope
+./boost/boost/multiprecision/number.hpp:44:181: warning: no return statement in function returning non-void [-Wreturn-type]
+./boost/boost/multiprecision/number.hpp: In member function ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’:
+./boost/boost/multiprecision/number.hpp:148:19: error: ‘e’ was not declared in this scope
+./boost/boost/multiprecision/number.hpp: In member function ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’:
+./boost/boost/multiprecision/number.hpp:194:9: error: only constructors take member initializers
+./boost/boost/multiprecision/number.hpp:194:42: error: ‘r’ was not declared in this scope
+./boost/boost/multiprecision/number.hpp:194:56: warning: no return statement in function returning non-void [-Wreturn-type]
+./boost/boost/multiprecision/number.hpp: In member function ‘int boost::multiprecision::number<Backend, ExpressionTemplates>::BOOST_NOEXCEPT_IF(int)’:
+./boost/boost/multiprecision/number.hpp:663:32: error: ‘o’ was not declared in this scope
+In file included from ./boost/boost/multiprecision/cpp_int.hpp:13:0,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/detail/integer_ops.hpp: In function ‘Integer boost::multiprecision::default_ops::eval_integer_modulus(const Backend&, Integer)’:
+./boost/boost/multiprecision/detail/integer_ops.hpp:26:4: error: ‘boost::multiprecision::detail::abs’ has not been declared
+In file included from ./boost/boost/multiprecision/cpp_int.hpp:21:0,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/type_traits/common_type.hpp: At global scope:
+./boost/boost/type_traits/common_type.hpp:111:26: error: ‘declval’ was not declared in this scope
+./boost/boost/type_traits/common_type.hpp:111:26: note: suggested alternative:
+/usr/include/c++/4.6/type_traits:1132:5: note:   ‘std::declval’
+./boost/boost/type_traits/common_type.hpp:111:26: error: ‘declval’ was not declared in this scope
+./boost/boost/type_traits/common_type.hpp:111:26: note: suggested alternative:
+/usr/include/c++/4.6/type_traits:1132:5: note:   ‘std::declval’
+./boost/boost/type_traits/common_type.hpp:111:34: error: expected primary-expression before ‘bool’
+In file included from ./boost/boost/multiprecision/cpp_int.hpp:23:0,
+                 from BealClient.hpp:17,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/cpp_int/checked.hpp: In function ‘A boost::multiprecision::backends::detail::checked_multiply(A, A, const mpl_::int_<1>&)’:
+./boost/boost/multiprecision/cpp_int/checked.hpp:106:4: error: ‘boost::multiprecision::detail::abs’ has not been declared
+In file included from BealClient.hpp:17:0,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/cpp_int.hpp: At global scope:
+./boost/boost/multiprecision/cpp_int.hpp:213:65: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:213:66: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:215:72: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:215:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:218:72: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:218:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:220:79: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:220:80: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:227:51: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:227:53: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:228:58: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:228:64: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:229:40: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:229:47: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:230:44: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:230:47: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:231:51: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:231:58: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:232:44: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:232:51: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:233:36: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:233:43: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:234:20: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:234:23: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:276:40: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:276:42: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:281:54: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:281:56: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:311:46: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:311:48: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:336:39: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:336:41: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:356:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:356:39: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:366:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:366:43: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:370:53: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:370:55: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:448:65: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:448:66: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:450:72: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:450:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:453:72: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:453:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:455:79: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:455:80: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:472:40: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:472:46: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:473:44: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:473:46: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:474:67: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:474:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:475:52: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:475:58: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:476:41: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:476:43: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:486:73: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:486:93: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:486:102: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:486:102: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:486:102: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:486:94: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:486:102: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:491:40: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:491:60: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:491:69: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:491:69: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:491:69: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:491:61: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:491:42: error: ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)1u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’ cannot be overloaded
+./boost/boost/multiprecision/cpp_int.hpp:486:75: error: with ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)1u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’
+./boost/boost/multiprecision/cpp_int.hpp:491:69: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:505:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:505:39: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:518:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:518:39: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:528:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:528:43: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:532:53: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:532:55: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:598:65: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:598:66: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:600:56: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:600:75: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:600:84: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:600:84: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:600:84: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:600:76: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:600:84: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:603:72: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:603:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:605:63: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:605:82: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:605:91: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:605:91: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:605:91: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:605:83: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:605:64: error: ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’ cannot be overloaded
+./boost/boost/multiprecision/cpp_int.hpp:600:57: error: with ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’
+./boost/boost/multiprecision/cpp_int.hpp:605:91: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:618:40: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:618:46: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:619:44: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:619:46: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:620:67: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:620:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:621:52: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:621:58: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:622:41: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:622:61: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:622:70: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:622:70: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:622:70: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:622:62: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:622:43: error: ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’ cannot be overloaded
+./boost/boost/multiprecision/cpp_int.hpp:600:57: error: with ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’
+./boost/boost/multiprecision/cpp_int.hpp:622:70: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:623:73: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:623:93: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:623:102: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:623:102: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:623:102: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:623:94: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:623:75: error: ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’ cannot be overloaded
+./boost/boost/multiprecision/cpp_int.hpp:600:57: error: with ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’
+./boost/boost/multiprecision/cpp_int.hpp:623:102: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:628:40: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:628:60: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:628:69: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:628:69: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:628:69: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:628:61: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:628:42: error: ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’ cannot be overloaded
+./boost/boost/multiprecision/cpp_int.hpp:600:57: error: with ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’
+./boost/boost/multiprecision/cpp_int.hpp:628:69: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:636:54: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:636:56: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:642:58: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:642:60: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:661:16: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:661:36: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:661:45: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:661:45: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:661:45: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:661:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:661:18: error: ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’ cannot be overloaded
+./boost/boost/multiprecision/cpp_int.hpp:600:57: error: with ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, false>::BOOST_NOEXCEPT_IF(...)’
+./boost/boost/multiprecision/cpp_int.hpp:661:45: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:677:53: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:677:59: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:681:53: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:681:55: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:766:155: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:769:137: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:772:156: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:775:138: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:778:160: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:781:142: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:798:56: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:798:62: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:799:44: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:799:46: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:800:67: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:800:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:801:36: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:801:42: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:802:41: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:802:43: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:815:40: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:815:60: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:815:69: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:815:69: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:815:69: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:815:61: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:815:69: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:824:75: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:824:77: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:827:58: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:827:60: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:832:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:832:39: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:841:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:841:43: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:845:53: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:845:55: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp: In member function ‘typename boost::disable_if_c<(std::numeric_limits<Type>::is_specialized && (std::numeric_limits<Type>::digits <= (int)(MinBits)))>::type boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)1u, Checked, void, true>::check_in_range(T, const mpl_::int_<1>&)’:
+./boost/boost/multiprecision/cpp_int.hpp:746:7: error: ‘boost::multiprecision::detail::abs’ has not been declared
+./boost/boost/multiprecision/cpp_int.hpp: At global scope:
+./boost/boost/multiprecision/cpp_int.hpp:908:155: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:911:137: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:914:157: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:917:139: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:920:110: error: expected initializer before ‘BOOST_NOEXCEPT_IF’
+./boost/boost/multiprecision/cpp_int.hpp:940:56: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:940:62: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:941:44: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:941:46: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:942:67: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:942:73: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:943:52: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:943:58: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:944:41: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:944:61: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:944:70: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:944:70: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:944:70: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:944:62: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:944:70: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:953:40: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:953:60: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:953:69: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:953:69: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:953:69: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:953:61: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:953:42: error: ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, true>::BOOST_NOEXCEPT_IF(...)’ cannot be overloaded
+./boost/boost/multiprecision/cpp_int.hpp:944:43: error: with ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, true>::BOOST_NOEXCEPT_IF(...)’
+./boost/boost/multiprecision/cpp_int.hpp:953:69: error: expected unqualified-id before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:960:75: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:960:77: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:963:58: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:963:60: error: ‘BOOST_NOEXCEPT’ does not name a type
+./boost/boost/multiprecision/cpp_int.hpp:967:37: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:967:57: error: expected identifier before ‘(’ token
+./boost/boost/multiprecision/cpp_int.hpp:967:66: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:967:66: error: expected ‘)’ before ‘==’ token
+./boost/boost/multiprecision/cpp_int.hpp:967:66: error: ISO C++ forbids declaration of ‘BOOST_NOEXCEPT_IF’ with no type [-fpermissive]
+./boost/boost/multiprecision/cpp_int.hpp:967:58: error: expected ‘;’ at end of member declaration
+./boost/boost/multiprecision/cpp_int.hpp:967:39: error: ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, true>::BOOST_NOEXCEPT_IF(...)’ cannot be overloaded
+./boost/boost/multiprecision/cpp_int.hpp:944:43: error: with ‘int boost::multiprecision::backends::cpp_int_base<MinBits, MinBits, (boost::multiprecision::cpp_integer_type)0u, Checked, void, true>::BOOST_NOEXCEPT_IF(...)’
+./boost/boost/multiprecision/cpp_int.hpp:967:66: error: expected unqualified-id before ‘==’ token
+BealClient.cpp:204:1: error: expected ‘}’ at end of input
+In file included from BealClient.hpp:17:0,
+                 from BealClient.cpp:1:
+./boost/boost/multiprecision/cpp_int.hpp:959:69: error: expected unqualified-id at end of input
+./boost/boost/multiprecision/cpp_int.hpp:959:69: error: expected ‘}’ at end of input
+./boost/boost/multiprecision/cpp_int.hpp:959:69: error: expected ‘}’ at end of input
+./boost/boost/multiprecision/cpp_int.hpp:959:69: error: expected ‘}’ at end of input
+make: *** [BealClient.o] Error 1
