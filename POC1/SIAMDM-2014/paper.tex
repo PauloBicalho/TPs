@@ -1,0 +1,158 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%  ltexpprt.tex  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is ltexpprt.tex, an example file for use with the SIAM LaTeX2E
+% Preprint Series macros. It is designed to provide double-column output. 
+% Please take the time to read the following comments, as they document
+% how to use these macros. This file can be composed and printed out for
+% use as sample output.
+
+% Any comments or questions regarding these macros should be directed to:
+%
+%                 Donna Witzleben
+%                 SIAM
+%                 3600 University City Science Center
+%                 Philadelphia, PA 19104-2688
+%                 USA
+%                 Telephone: (215) 382-9800
+%                 Fax: (215) 386-7999
+%                 e-mail: witzleben@siam.org
+
+
+% This file is to be used as an example for style only. It should not be read
+% for content.
+
+%%%%%%%%%%%%%%% PLEASE NOTE THE FOLLOWING STYLE RESTRICTIONS %%%%%%%%%%%%%%%
+
+%%  1. There are no new tags.  Existing LaTeX tags have been formatted to match
+%%     the Preprint series style.    
+%%
+%%  2. You must use \cite in the text to mark your reference citations and 
+%%     \bibitem in the listing of references at the end of your chapter. See
+%%     the examples in the following file. If you are using BibTeX, please
+%%     supply the bst file with the manuscript file.
+%% 
+%%  3. This macro is set up for two levels of headings (\section and 
+%%     \subsection). The macro will automatically number the headings for you.
+%%
+%%  5. No running heads are to be used for this volume.
+%% 
+%%  6. Theorems, Lemmas, Definitions, etc. are to be double numbered, 
+%%     indicating the section and the occurence of that element
+%%     within that section. (For example, the first theorem in the second
+%%     section would be numbered 2.1. The macro will 
+%%     automatically do the numbering for you.
+%%
+%%  7. Figures, equations, and tables must be single-numbered. 
+%%     Use existing LaTeX tags for these elements.
+%%     Numbering will be done automatically.
+%%   
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\documentclass[twoside,leqno,twocolumn]{article}  
+\documentclass[12pt]{article}
+\usepackage{sbc-template} 
+\usepackage{makeidx}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{times}
+\usepackage{graphicx,url}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage[section]{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{colortbl}
+\usepackage{booktabs}
+%\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{epstopdf}
+
+\sloppy
+
+\title{Building Semantic Profiles of Social Network User Groups}
+\author{Aluno: Paulo Viana Bicalho \inst{1}, Orientadora: Gisele Lobo Pappa \inst{1} }
+
+\address{Universidade Federal de Minas Gerais  (UFMG)\\ }
+
+\begin{document}
+
+\newcommand{\fhmourao}[1]{{\color{red}[#1]}}
+\newcommand{\gi}[1]{{\color{blue}[#1]}}
+\newcommand{\method}{UPsCAle }
+
+%\setlength{\abovecaptionskip}{0.2pt}
+%\setlength{\belowcaptionskip}{0.2pt}
+%\setlength{\abovedisplayskip}{0pt}
+%\setlength{\belowdisplayskip}{0pt}
+
+%\linespread{0.5}
+
+%\setcounter{chapter}{2} % If you are doing your chapter as chapter one,
+%\setcounter{section}{3} % comment these two lines out.
+
+%\title{\Large{Building Semantic Profiles of Social Network User Groups}}
+%\author{Tiago Cunha\thanks{Federal University of Minas Gerais.} 
+%\and 
+%Fernando Mour\~ao \footnotemark[1]
+%\and 
+%Paulo Bicalho \footnotemark[1]
+%\and 
+%Gisele L. Pappa \footnotemark[1]
+%\and 
+%Wagner Meira Jr. \footnotemark[1]\\
+%}
+
+
+
+
+
+
+
+
+
+\date{}
+
+\maketitle
+
+ 
+%\pagenumbering{arabic}
+%\setcounter{page}{1}%Leave this line commented out.
+
+\begin{abstract} \small\baselineskip=9pt 
+Information about users in social networks is highly valuable for
+understanding user preferences regarding products, brands or politics. Many
+works have tried to cluster or classify each user according to her common
+interests. This paper, in contrast, proposes an approach to characterize
+groups of users with a common interest, expressed through relationships in
+social networks. In the characterization process, users preferences are
+defined by the semantic topics they most discuss. In order to find semantic
+topics, we propose a method that successfully merges topics found through
+matrix factorization by performing random walks in a latent-topic transition
+graph. Experiments were performed in documents datasets for easier evaluation
+and in social network datasets. The method showed to be scalable and accurate
+in identifying the semantic topics inside a selected group of users.\\
+\textbf{Keywords: users profiles, topic discovery, NMF}
+\end{abstract}
+
+ 
+
+\input{introduction}
+\input{related}
+\input{method}
+\input{experiments}
+\input{discussion}
+
+\bibliographystyle{sbc}
+\bibliography{references}
+
+\end{document}
+
+% End of ltexpprt.tex
+%

@@ -1,0 +1,93 @@
+\section{Introduction}
+
+Twitter has already proven to be a powerful source of information for  monitoring
+trends, sentiments and topics, 
+%\cite{ramage2010characterizing}, 
+but to
+this date not a lot is known about Twitter users.  The majority of studies
+regarding users focuses on issues such as the demographics of Twitter, 
+%(including methods for inferring sex, age or location information)
+%\cite{davisjr:2011}, 
+community detection %\cite{java2007we} 
+and measures to assess user influence.  However, only a 
+few works have focused on another very interesting issue: user profiling\cite{abel:2011}. 
+
+A user profile may contain different elements, including user preferences (as
+expressed in messages), personal information (such as gender and location) or
+social network behavior (usage time and number of posts per day, among others).
+In this work we define users' profiles based on their general preferences,
+where a preference is defined by a \textit{semantic topic} discussed in their
+posts. 
+ 
+In contrast with previous methods for creating user profiles for specific user
+accounts \cite{pennacchiotti2011democrats,abel2011semantic}, here we are
+interested in generating profiles of \textit{groups of users}.  These groups
+comprise users that share at least one common interest, which may become
+explicit when they follow the same Twitter account or frequently discuss the
+same topic. Identifying such groups and profiles is of great value for
+companies, which can take advantage of them for targeted marketing,
+recommendation, or to better understand users preferences over time. 
+
+By profiling groups of users we avoid problems of privacy and data scarcity
+while being able to determine the underlying habits and preferences
+\cite{zheleva:2009}.  On the other hand, there are several challenges in
+such profiling task. The first challenge arises when determining the
+semantic topics that characterize the users, since they must be,
+simultaneously, the \textit{smallest representative} set of \textit{highly
+cohesive} and \textit{non-fragmented} topics observed in a set of messages.
+The second challenge is related to the efficiency of the profiling method,
+since the number of posts is usually huge and increasing. The third challenge
+is the lack of context associated with microblog messages such as Twitter,
+making the topic detection, and thus profiling particularly challenging.
+The fourth challenge is, given a set of semantic topics, to identify the 
+users that will compose each group, coupling with their diversity
+and the complexity of the topic. Finally, we may summarize the profile of
+each group based on the semantic topics that arise in the group and 
+their intensity.
+
+Formally, considering that we extract semantic topics from users posts, any set
+of users $U$ can be characterized by a weighted set of preferences
+$<$$p_1$,$p_2$,$\ldots$,$p_n$$>$, where $p_x$ represents a semantic topic
+identified from the posts of the group. Although we focus just on topics as
+preferences in this work, other personal user characteristics may be added to
+the preference set later.
+
+In order to build semantic profiles of groups of users, we propose the UPsCAle
+(User Profile CreAtor) framework, which is organized in three main phases: (i)
+it identifies semantic sub-topics of a user group using a traditional matrix
+factorization method; (ii) it merges semantic sub-topics into more cohesive and
+unique semantic topics; (iii) it maps the final set of semantic topics into
+users profiles.  In the first phase, we benefit from the fact that the task has
+been extensively studied~\cite{pons2007topic}, and employ a Non-negative Matrix
+Factorization (NMF) \cite{berry2007algorithms}, which is capable of generating
+good-quality topics, despite vocabulary overlaps.  However, these semantic
+topics may still lack cohesion\cite{cheng:2013}, and we propose a new method
+for phase (ii), based on Markovian theory, for merging topics in order to
+generate more cohesive topics.  Finally, the desired profiles are then
+generated based on a simple strategy that has shown to perform surprisingly
+well.
+
+In summary, this paper has two main contributions. The first, a new generic
+semantic topic identification method that can be used in any topic detection
+task and optimizes the three contradictory but desirable properties in topic
+identification simultaneously: representativeness, cohesion and
+non-fragmentation. The method is also scalable, efficient and handles the lack
+of context usually inherent to microblogs and other social media platforms.
+The second contribution is a simple yet effective method to define users
+profiles considering groups of users, represented by a weighted set of
+preferences that initially correspond to semantic topics. 
+
+\method was evaluated in two phases. First, we tested the topic identification
+method in both text and social network collections where the main topics were
+known. Second, we performed a case study with over 50,000 users that are
+Twitter followers of Barack Obama, considering more than the 700,000 messages
+posted during the American Elections in 2012. The results showed that the
+method is able to generate less fragmented and more concise topics when
+compared to other state of the art methods.% for topics identification.
+Such topics enabled the determination of good quality profiles, as the results
+show.
+
+%WMJ: do we have anything to say about users?
+
+%The remainder of this paper is organized as follows. Section 2 discusses related work in both user profiles and semantic topic identification. Section 3 introduces UPscALe, the framework developed to find users profiles according to semantic topics. Section 4 describes the experimental methodology, where tests wih both labeled and unlabeled data are performed. Finally, Section 5 draws conclusions and discusses future work directions.
+

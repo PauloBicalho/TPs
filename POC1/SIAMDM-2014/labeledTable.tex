@@ -1,0 +1,141 @@
+%\newcommand{\green}{\cellcolor{green}}
+%\newcommand{\red}{\cellcolor{red}}
+%\newcommand{\norm}{\cellcolor{blue}}
+
+\newcommand{\green}{\textcolor[rgb]{00,0.45,0.10}{$\blacktriangle$}}
+\newcommand{\red}{\textcolor[rgb] {0.7,00,00}{$\blacktriangledown$}}
+\newcommand{\norm}{\textcolor[rgb]{0.7,0.7,0.0}{$\bullet$}}
+
+
+
+
+\begin{sidewaystable}
+%\begin{table*}
+%\begin{scriptsize}
+\caption{ Results obtained for Observatory and AgNews. Documents with topics represent the number of documents assigned to at least one topic. The metrics of precision and recall are calculated under these documents. The four cenarious presented considering different mapping of Doc\_Topic\_Topic\_Class. \\}
+\label{tbl:topics}
+
+
+
+\begin{tabular}{|c||c|c|c|c||c|c|c|c|c|c|c|c|c|}
+\hline
+Cohesion&\multirow{2}{*}{Method}&\multicolumn{2}{c|}{\#Topics}&Docs &\multirow{2}{*}{Purity}&\multicolumn{2}{c|}{1-1\_1-1} &\multicolumn{2}{c|}{1-1\_N-1} &\multicolumn{2}{c|}{1-N\_N-1} &\multicolumn{2}{c|}{1-N\_N-N}\\ \cline{3-4}\cline{7-14}
+         	($\alpha$) &          &     k    &      k'       & with Topics    &  & e-prec.   & e-recall          & e-prec.   & e-recall          & e-prec.   & e-recall          & e-prec.   & e-recall          
+\\ \hline \hline
+
+ \multicolumn{14}{|c|}{\textbf{Observatory}} 
+\\ \hline \hline
+
+\multirow{4}{*}{0.30} 
+  & UPsCAle-0.35 & 115& 15.6 & \red 0.883 & \red 0.641 & \red 0.574 & \green 0.380 & \norm  0.477 & \green 0.435 & \norm  0.437 & \green 0.466 & \norm 0.789 & \green 0.884
+\\ 
+ & UPsCAle-0.45 & 171& 23.3 & \red 0.968 & \red 0.678 & \red 0.579 & \green 0.280 & \norm 0.461 & \green 0.358 & \norm 0.422 & \green 0.395 & \red 0.757 & \red 0.863
+\\ \index{•}
+ & UPsCAle-0.55 & 242& 31.3 & \norm 0.995 & \red 0.685 & \red 0.554 & \green 0.217 & \norm 0.451 & \green 0.304 & \norm 0.406 & \green 0.342 & \red 0.753 & \norm 0.873
+\\
+& UPsCAle & 25 & 5.9 & \red 0.391 & \green 0.825 & \red 0.520 & \green 0.429 & \norm  0.494 & \green 0.450 & \green 0.476 & \green 0.455 & \green 0.852 & \norm 0.868
+\\ \hline{}
+
+\multirow{4}{*}{0.50} 
+ & UPsCAle-0.35 & 115& 25.1   & \red 0.885 & \red 0.696 & \red 0.582 & \green 0.283  & \green 0.473 & \green 0.364  & \norm 0.434 & \green 0.390  & \norm 0.769 & \red 0.855  
+\\
+ & UPsCAle-0.45 & 171 & 32.9  & \red 0.963 & \red 0.698 & \norm  0.631 & \green 0.244  & \norm 0.461 & \green 0.326  & \norm 0.413 & \green 0.363  & \red 0.761 & \red 0.864  
+\\ 
+ & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{UPsCAle-0.55} & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{242}& 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{43.9}    & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.995} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.745} &  \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.657} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.175}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.438} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.247}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.404} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.271}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.773} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.873}
+ \\
+ & UPsCAle & 25 & 9.7    & \red 0.395 & \norm 0.747 & \norm 0.631 & \green 0.442  & \green 0.566 & \green 0.508  & \green 0.552 & \green 0.516 & \green 0.859 & \norm 0.883
+
+\\ \hline	
+
+
+%\multirow{4}{*}{0.70} 
+% & UPsCAle-0.35 & 115& 29.9 & \red 0.889 & \red 0.682 & \norm 0.655 & \green 0.288 & \green 0.513 & \green 0.398 & \green 0.466 & \green 0.430 & \norm 0.768 & \red 0.855
+%\\ 
+% & UPsCAle-0.45 & 171& 38.1 & \red 0.967 & \red 0.699 & \norm 0.622 & \green 0.218 & \norm 0.448 & \green 0.315 & \norm 0.412 & \green 0.348 & \norm 0.775 & \norm 0.873
+%\\ 
+% & UPsCAle-0.55 & 242& 43.7 & \norm 0.995 & \norm 0.745 & \norm 0.623 & \norm 0.179 & \norm 0.458 & \green 0.261 & \norm 0.399 & \green 0.284 & \green 0.810 & \green 0.907 
+%\\
+%& UPsCAle  & 25 & 17.2 & \red 0.399 & \red 0.602 & \norm  0.732 & \red 0.405 & \green 0.653 & \green 0.645 & \green 0.642 & \green 0.657 & \green 0.830 &  0.865
+%\\ \hline 
+
+
+\multirow{4}{*}{-} 
+ & SVD+HC & - &2,333 & \green 0.999 & \red 0.354 & \green 0.898 & \red 0.024 & \green 0.776 & \green 0.775 & \green 0.776 & \green 0.775 & \green 0.956 & \green 0.956
+\\ 
+ & NMF+EM & 25 & 12.7 & \red 0.925 & \red 0.540 & \red 0.435 & \green 0.289 & \norm 0.390 & \green 0.415 & \norm 0.390 & \green 0.415 & \green 0.812 & \red 0.812
+\\ 
+ & NMF & 6 & 6.0 & \red 0.111 & \green 0.780 & \norm 0.670 & \green 0.629 & \green 0.671 & \green 0.699 & \green 0.669 & \green 0.700 & \green 0.921 & \green 0.923  
+\\ \hline	
+
+
+\hline
+
+\multicolumn{14}{|c|}{\textbf{AgNews}} 
+\\ \hline \hline
+ 
+ \multirow{3}{*}{0.30} 
+  & UPsCAle-0.35 & 59&  13.9 & \red 0.011 & \red 0.559 & \red 0.181 & \green 0.191 & \red 0.200 & \green 0.204 & \norm 0.200 & \green 0.204 & \norm 0.763 & \green 0.836
+\\ 
+ & UPsCAle-0.45 & 103& 19.4 & \red 0.085 & \red 0.694 & \red 0.242 & \green 0.166 & \norm 0.206 & \green 0.181 & \norm 0.207 & \green 0.186 & \green 0.781 & \green 0.806
+\\ 
+ & UPsCAle-0.55 & 163& 31.9 & \norm 0.359 & \norm 0.803 & \norm 0.246 & \norm 0.125 &  \norm 0.212 & \norm 0.137 & \norm 0.197 & \norm 0.140 & \norm 0.762 & \norm 0.797
+\\
+& UPsCAle        & 154 & 29.5 & \norm 0.283 & \norm 0.796 & \red 0.242 & \green 0.143 & \norm 0.212 & \norm 0.154 & \norm 0.189 & \norm 0.154 & \green 0.765 & \green 0.796 
+\\ \hline{}
+
+
+\multirow{3}{*}{0.50} 
+ & UPsCAle-0.35 & 59& 16.5   & \red 0.011 & \red 0.557 &  \red 0.229 & \green 0.219  & \norm 0.227 & \green 0.238  & \norm 0.231 & \green 0.239  & \green 0.784 & \green 0.855
+\\
+ & UPsCAle-0.45 & 103 &  24.1  & \red 0.090 & \red 0.693 & \norm  0.309 & \green 0.183  & \norm 0.256 & \green 0.202  & \norm 0.248 & \green 0.207  & \green 0.776 & \green 0.802
+\\ 
+ 
+
+ & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{UPsCAle-0.55} & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{163}& 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{34.4}    & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.360} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.810} &  \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.292} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.117}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.252} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.132}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.235} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.137}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.751} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.783}
+ \\
+ 
+ 
+ 
+ 
+ & UPsCAle & 154 &   31.9   & \norm 0.283 & \red 0.787 & \norm 0.304 & \green 0.139  & \norm 0.245 & \green 0.157 & \norm 0.228 & \green 0.165  & \green 0.770 & \green 0.799 
+\\ \hline
+
+%\multirow{3}{*}{0.70} 
+% & UPsCAle-0.35 & 59& 38.3 & \red 0.011 & \red 0.335 & \norm 0.413 & \green 0.328 & \green 0.388 & \green 0.394 & \green 0.382 & \green 0.387 & \green 0.790 & \green 0.882
+%\\ 
+% & UPsCAle-0.45 & 103& 56.7 & \red 0.085 & \red 0.468 & \green 0.471 & \green 0.235 & \green 0.419 & \green 0.354 & \green 0.419 & \green 0.358 & \green 0.777 & \green 0.819
+%\\ 
+% & UPsCAle-0.55 & 163& 42.1 & \norm 0.341 & \red 0.741 & \green 0.382 & \green 0.180 & \green 0.321 & \green 0.206 & \green 0.299 & \green 0.215 & \green 0.775 & \green 0.815
+%\\
+%& UPsCAle       & 154 & 39.1 & \norm 0.283 & \red 0.743 & \green 0.387 & \green 0.194 & \green 0.316 & \green 0.217 & \green 0.305 & \green 0.225 & \green 0.787 & \green  0.822
+%\\ \hline
+- & NMF & - & 11 & - & - & - & - & - & - & - & - & - & - 
+\\ \hline
+
+\end{tabular}
+
+
+
+%\end{scriptsize}
+%\end{table*}
+
+\end{sidewaystable}
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+
+
+\begin{table*}
+\begin{scriptsize}
+\caption{ Results obtained for Observatory and AgNews. Documents with topics represent the number of documents assigned to at least one topic. The metrics of precision and recall are calculated under these documents. The four cenarious presented considering different mapping of Doc\_Topic\_Topic\_Class.}
+\label{tbl:topics}
+\begin{tabular}{|c||c|c|c|c||c|c|c|c|c|c|c|c|c|}
+\hline
+Cohesion&\multirow{2}{*}{Method}&\multicolumn{2}{c|}{\#Topics}&Docs &\multirow{2}{*}{Purity}&\multicolumn{2}{c|}{1-1\_1-1} &\multicolumn{2}{c|}{1-1\_N-1} &\multicolumn{2}{c|}{1-N\_N-1} &\multicolumn{2}{c|}{1-N\_N-N}\\ \cline{3-4}\cline{7-14}
+         	($\alpha$) &          &     k    &      k'       & with Topics    &  & e-prec.   & e-recall          & e-prec.   & e-recall          & e-prec.   & e-recall          & e-prec.   & e-recall          
+\\ \hline \hline
+
+ \multicolumn{14}{|c|}{\textbf{Observatory}} 
+\\ \hline \hline
+
+\multirow{4}{*}{0.30} 
+  & UPsCAle-0.35 & 115& 15.600 & 0.883 & 0.641 & 0.574 & 0.380 & 0.477 & 0.435 & 0.437 & 0.466 & 0.789 & 0.884
+\\ 
+ & UPsCAle-0.45 & 171& 23.300 & 0.968 & 0.678 & 0.579 & 0.280 & 0.461 & 0.358 & 0.422 & 0.395 & 0.757 & 0.863
+\\ 
+ & UPsCAle-0.55 & 242& 31.300 & 0.995 & 0.685 & 0.554 & 0.217 & 0.451 & 0.304 & 0.406 & 0.342 & 0.753 & 0.873
+\\
+& UPsCAle & 25 & 5.900 & 0.391 & 0.825 & 0.520 & 0.429 & 0.494 & 0.450 & 0.476 & 0.455 & 0.852 & 0.868
+\\ \hline{}
+
+\multirow{4}{*}{0.50} 
+ & UPsCAle-0.35 & 115& 25.1   & 0.885 & 0.696 &                  0.582 & 0.283  & 0.473 & 0.364  & 0.434 & 0.390  & 0.769 & 0.855  
+\\
+ & UPsCAle-0.45 & 171 & 32.9   & 0.963 & 0.698 &              0.631 & 0.244  & 0.461 & 0.326  & 0.413 & 0.363  & 0.761 & 0.864  
+\\ 
+ & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{UPsCAle-0.55} & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{242}& 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{43.9}    & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.995} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.745} &  \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.657} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.175}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.438} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.247}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.404} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.271}  & \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.773} & 
+ \multicolumn{1}{| >{\cellcolor[gray]{0.85}}c|}{0.873}
+ \\
+ & UPsCAle & 25 & 9.7    & 0.395 & 0.747 & 0.631 & 0.442  & 0.566 & 0.508  & 0.552 & 0.516 & 0.859 & 0.883
+
+\\ \hline	
+
+
+\multirow{4}{*}{0.70} 
+ & UPsCAle-0.35 & 115& 29.900 & 0.889 & 0.682 & 0.655 & 0.288 & 0.513 & 0.398 & 0.466 & 0.430 & 0.768 & 0.855
+\\ 
+ & UPsCAle-0.45 & 171& 38.100 & 0.967 & 0.699 & 0.622 & 0.218 & 0.448 & 0.315 & 0.412 & 0.348 & 0.775 & 0.873
+\\ 
+ & UPsCAle-0.55 & 242& 43.700 & 0.995 & 0.745 & 0.623 & 0.179 & 0.458 & 0.261 & 0.399 & 0.284 & 0.810 & 0.907 
+\\
+& UPsCAle  & 25 & 17.200 & 0.399 & 0.602 & 0.732 & 0.405 & 0.653 & 0.645 & 0.642 & 0.657 & 0.830 & 0.865
+\\ \hline 
+
+
+\multirow{4}{*}{-} 
+ & SVD+HC & - &2,333 & 0.999 & 0.3539 & 0.898 & 0.024 & 0.776 & 0.775 & 0.776 & 0.775 & 0.956 & 0.956
+\\
+ & NNMF+EM & 25 & 12.700 & 0.925 & 0.540 & 0.435 & 0.289 & 0.390 & 0.415 & 0.390 & 0.415 & 0.812 & 0.812
+\\ 
+ & NNMF & 6 & 6.000 & 0.111 & 0.780 & 0.670 & 0.629 & 0.671 & 0.699 & 0.669 & 0.700 & 0.921 & 0.923  
+\\ \hline	
+
+
+\hline
+
+\multicolumn{14}{|c|}{\textbf{AgNews}} 
+\\ \hline \hline
+ 
+ \multirow{3}{*}{0.30} 
+  & UPsCAle-0.35 & 59&  13.900 & 0.011 & 0.559 & 0.181 & 0.191 & 0.200 & 0.204 & 0.200 & 0.204 & 0.763 & 0.836
+\\ 
+ & UPsCAle-0.45 & 103& 19.400 & 0.085 & 0.694 & 0.242 & 0.166 & 0.206 & 0.181 & 0.207 & 0.186 & 0.781 & 0.806
+\\ 
+ & UPsCAle-0.55 & 163& 31.900 & 0.359 & 0.803 & 0.246 & 0.125 & 0.212 & 0.137 & 0.197 & 0.140 & 0.762 & 0.797
+\\
+& UPsCAle        & 154 & 29.500 & 0.283 & 0.796 & 0.242 & 0.143 & 0.212 & 0.154 & 0.189 & 0.154 & 0.765 & 0.796 
+\\ \hline{}
+
+
+\multirow{3}{*}{0.50} 
+ & UPsCAle-0.35 & 59& 16.555   & 0.011 &  0.557 &                  0.229 & 0.219  & 0.227 & 0.238  & 0.231 & 0.239  & 0.784 & 0.855
+\\
+ & UPsCAle-0.45 & 103 &  24.111  & 0.090 & 0.693 &              0.309 & 0.183  & 0.256 & 0.202  & 0.248 & 0.207  & 0.776 & 0.802
+\\ 
+ & UPsCAle-0.55 & 163&   34.444   & 0.360 & 0.810 &           0.292 & 0.117  & 0.252 & 0.132  & 0.235 & 0.137  & 0.751 & 0.783 
+ \\
+ & UPsCAle & 154 &   31.9   & 0.283 & 0.787 & 0.304 & 0.139  & 0.245 & 0.157 & 0.228 & 0.165  & 0.770 & 0.799 
+\\ \hline
+
+\multirow{3}{*}{0.70} 
+ & UPsCAle-0.35 & 59& 38.300 & 0.011 & 0.335 & 0.413 & 0.328 & 0.388 & 0.394 & 0.382 & 0.387 & 0.790 & 0.882
+\\ 
+ & UPsCAle-0.45 & 103& 56.700 & 0.085 & 0.468 & 0.471 & 0.235 & 0.419 & 0.354 & 0.419 & 0.358 & 0.777 & 0.819
+\\ 
+ & UPsCAle-0.55 & 163& 42.100 & 0.341 & 0.741 & 0.382 & 0.180 & 0.321 & 0.206 & 0.299 & 0.215 & 0.775 & 0.815
+\\
+& UPsCAle       & 154 & 39.100 & 0.283 & 0.743 & 0.387 & 0.194 & 0.316 & 0.217 & 0.305 & 0.225 & 0.787 & 0.822
+\\ \hline
+- & NNMF & - & 11 & - & - & - & - & - & - & - & - & - & - 
+\\ \hline
+
+\end{tabular}
+
+
+\end{scriptsize}
+\end{table*}
+
+

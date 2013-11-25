@@ -1,0 +1,96 @@
+\section{Introduction}
+
+Twitter has already proven to be a powerful source of information for  monitoring
+trends, sentiments and topics, 
+%\cite{ramage2010characterizing}, 
+but to
+this date not a lot is known about Twitter users.  The majority of studies
+regarding users focuses on issues such as the demographics of Twitter, 
+%(including methods for inferring sex, age or location information)
+%\cite{davisjr:2011}, 
+community detection %\cite{java2007we} 
+and measures to assess user influence.  However, only a 
+few papers have focused on another very interesting issue: user profiling\cite{abel:2011}. 
+
+A user profile is made of different elements, including user
+preferences (as expressed in messages), personal information (such as gender and
+location) or social network behavior (usage time and number of posts per day,
+among others).  In contrast with previous methods for creating user profiles for
+specific user accounts \cite{pennacchiotti2011democrats,abel2011semantic}, here
+we are interested in generating profiles of \textit{groups of users}. By
+working with groups of users we avoid problems of privacy and data scarcity
+while being able to determine the underlying individual preferences \cite{zheleva:2009}. 
+
+The user groups we want to profile comprise users that share at least one
+common interest, which may become explicit when they follow the same Twitter
+account or frequently discuss the same topic.  Identifying such groups and
+profiles is of great value for companies, which can take advantage of them for
+targeted marketing, recommendation, or to better understand
+users preferences over time. On the other hand, this task is challenging because it may be seen as a clustering without a pre-defined similarity criterion.
+
+%A few studies have previously proposed approaches to identify user preferences in social networks and microblogs \cite{pennacchiotti2011democrats,abel2011semantic}. 
+%cho que a intro ficaria mais linear: redes sociais, user profiles, user groups, topico, termos, requisitos, upscale, contribuicoes, comentarios sobre os resultados (que podem ter que ser descartados
+
+
+In this work, we define users' profiles based on their general preferences,
+where a preference is defined by a \textit{semantic topic} discussed in their
+posts. Identifying semantic topics is not a new task
+\cite{pons2007topic}, although in many cases the
+topic identification process is still based on the syntactic correlations
+between terms and usually generates highly fragmented topics (or semantic
+sub-topics). 
+
+Formally, considering that we can extract semantic topics from users posts, any
+set of users $U$ can be characterized by a weighted set of preferences
+$<$$p_1$,$p_2$,$\ldots$,$p_n$$>$, where $p_x$ represents a semantic topic
+identified from the posts of the group. Although initially we employ only
+topics as preferences, other personal user characteristics may be added to
+the preference set later.
+
+In order to build users semantic profiles we propose the UPsCAle (User Profile
+CreAtor) framework, which is organized in three main phases: (i) it identifies
+semantic sub-topics of a user group using a traditional matrix factorization
+method; (ii) it merges semantic sub-topics into more cohesive and unique
+semantic topics; (iii) it maps the final set of semantic topics into users
+profiles. The first phase uses a Non-negative Matrix Factorization (NMF)
+\cite{berry2007algorithms} , ideal in this context since it does not assume that the latent
+factors extracted from data compose a space of independent variables. This is
+crucial, as topic overlapping might be common in the scenarios we are dealing
+with.
+
+Despite of their success in generating the so called semantic topics, matrix
+factorization methods still generate latent factors that are fragmented (or
+lack cohesion) and hence are not unique \cite{cheng:2013}. This results in latent factors
+with different vocabularies often referring to the same topic. In order to deal
+with the problem of topic fragmentation, in the second phase we propose a new
+method for merging what we call semantic sub-topics (or latent factors) in
+order to generate more cohesive and unique semantic topics. The proposed
+method is based on Markovian theory and random walks, and works according to
+the probability of topics reaching each other in a sub-topic transition graph.
+Finally, we map users to topics according to the probabilities of their posts
+belonging to a topic. 
+
+This paper has two main contributions. The first, a new generic semantic topic
+identification method that can be used in any topic detection task and
+optimizes three contradictory desirable properties in topic identification
+simultaneously: it finds the \textit{smallest representative} set of topics
+\textit{highly cohesive} and \textit{non-fragmented} observed in a set of
+messages. It also provides an efficient method for merging topics, which scales
+to high volumes of posts. Finally, although intuitively, the length restriction
+of posts in social media provides no information about context, the method
+showed to overcome this problem.  The second contribution is a simple method to
+define users profiles considering groups of users, represented by a weighted
+set of preferences that initially correspond to semantic topics. 
+
+\method was evaluated in two phases. First, we tested the topic identification
+method in both text and social network collections where the main topics were
+known. Second, we performed a case study with over 50,000 users that are
+Twitter followers of Barack Obama, considering more than the 700,000 messages
+posted during the American Elections in 2012. The results showed that the
+method is able to generate less fragmented and more concise topics when
+compared to other state of the art methods.% for topics identification.
+
+%WMJ: do we have anything to say about users?
+
+The remainder of this paper is organized as follows. Section 2 discusses related work in both user profiles and semantic topic identification. Section 3 introduces UPscALe, the framework developed to find users profiles according to semantic topics. Section 4 describes the experimental methodology, where tests wih both labeled and unlabeled data are performed. Finally, Section 5 draws conclusions and discusses future work directions.
+

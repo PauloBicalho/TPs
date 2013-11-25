@@ -1,0 +1,102 @@
+\begin{thebibliography}{}
+
+\bibitem[Abel et~al. 2011a]{abel:2011}
+Abel, F., Gao, Q., Houben, G., and Tao, K. (2011a).
+\newblock Analyzing user modeling on twitter for personalized news
+  recommendations.
+\newblock In {\em UMAP'11}, pages 1--12.
+
+\bibitem[Abel et~al. 2011b]{abel2011semantic}
+Abel, F., Gao, Q., Houben, G., and Tao, K. (2011b).
+\newblock Semantic enrichment of twitter posts for user profile construction on
+  the social web.
+\newblock In {\em The Semanic Web: Research and Applications}, pages 375--389.
+  Springer.
+
+\bibitem[Aggarwal 2012]{aggarwal2012mining}
+Aggarwal, C.~C. (2012).
+\newblock {\em Mining text data}.
+\newblock Springer Science+ Business Media.
+
+\bibitem[Bai et~al. 2013]{bai:2013}
+Bai, L., Guo, J., Lan, Y., and Cheng, X. (2013).
+\newblock Group sparse topical coding: from code to topic.
+\newblock In {\em ACM WSDM}, pages 315--324.
+
+\bibitem[Berry et~al. 2007]{berry2007algorithms}
+Berry, M., Browne, M., Langville, A., Pauca, V., and Plemmons, R. (2007).
+\newblock Algorithms and applications for approximate nonnegative matrix
+  factorization.
+\newblock {\em Computational Statistics \& Data Analysis}, 52(1):155--173.
+
+\bibitem[Cheng et~al. 2013]{cheng:2013}
+Cheng, X., Guo, J., Liu, S., Wang, Y., and Yan, X. (2013).
+\newblock Learning topics in short texts by non-negative matrix factorization
+  on term correlation matrix.
+\newblock In {\em SDM}, pages 749--757.
+
+\bibitem[Johnson and Wichern 2002]{johnson2002applied}
+Johnson, R.~A. and Wichern, D.~W. (2002).
+\newblock {\em Applied multivariate statistical analysis}, volume~5.
+\newblock Prentice Hall.
+
+\bibitem[Kao et~al. 2004]{kao2004mining}
+Kao, H.-Y., Lin, S.-H., Ho, J.-M., and Chen, M.-S. (2004).
+\newblock Mining web informative structures and contents based on entropy
+  analysis.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  16(1):41--55.
+
+\bibitem[Kuhn et~al. 2007]{kuhn2007semantic}
+Kuhn, A., Ducasse, S., and G{\'\i}rba, T. (2007).
+\newblock Semantic clustering: Identifying topics in source code.
+\newblock {\em Information and Software Technology}, 49(3):230--243.
+
+\bibitem[Lin 2007]{lin2007convergence}
+Lin, C. (2007).
+\newblock On the convergence of multiplicative update algorithms for
+  nonnegative matrix factorization.
+\newblock {\em Neural Networks, IEEE Transactions on}, 18(6):1589--1596.
+
+\bibitem[Mihalcea and Radev 2011]{mihalcea2011graph}
+Mihalcea, R. and Radev, D. (2011).
+\newblock {\em Graph-based natural language processing and information
+  retrieval}.
+\newblock Cambridge University Press.
+
+\bibitem[Pennacchiotti and Popescu 2011]{pennacchiotti2011democrats}
+Pennacchiotti, M. and Popescu, A.-M. (2011).
+\newblock Democrats, republicans and starbucks afficionados: user
+  classification in twitter.
+\newblock In {\em ACM SIGKDD}, pages 430--438.
+
+\bibitem[Pons-Porrata et~al. 2007]{pons2007topic}
+Pons-Porrata, A., Berlanga-Llavori, R., and Ruiz-Shulcloper, J. (2007).
+\newblock Topic discovery based on text mining techniques.
+\newblock {\em Information processing \& management}, 43(3):752--768.
+
+\bibitem[Tao et~al. 2012]{tao:2011}
+Tao, K., Abel, F., Gao, Q., and Houben, G. (2012).
+\newblock {TUMS}: twitter-based user modeling service.
+\newblock In {\em Proc. of the 8th Int. Conf on The Semantic Web}, pages
+  269--283.
+
+\bibitem[Tsoumakas and Katakis 2007]{tsoumakas2007multi}
+Tsoumakas, G. and Katakis, I. (2007).
+\newblock Multi-label classification: An overview.
+\newblock {\em International Journal of Data Warehousing and Mining (IJDWM)},
+  3(3):1--13.
+
+\bibitem[Witten and Frank 2005]{witten:2005}
+Witten, I.~H. and Frank, E. (2005).
+\newblock {\em Data Mining: Practical Machine Learning Tools and Techniques
+  with Java Implementations}.
+\newblock Morgan Kaufmann, 2nd edition.
+
+\bibitem[Zheleva and Getoor 2009]{zheleva:2009}
+Zheleva, E. and Getoor, L. (2009).
+\newblock To join or not to join: the illusion of privacy in social networks
+  with mixed public and private user profiles.
+\newblock In {\em WWW'09}, pages 531--540.
+
+\end{thebibliography}

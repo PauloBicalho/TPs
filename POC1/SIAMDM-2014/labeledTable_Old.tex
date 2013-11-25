@@ -1,0 +1,71 @@
+%\begin{table}
+%\begin{tabular}{|c|c|c|}
+%Method              & AgNews  & Observatory \\ \hline
+%\hline
+%TBA-0.35            & 0.013  & 0.878 \\ \hline
+%TBA-0.45            & 0.126  & 0.972 \\ \hline
+%TBA-0.55            & 0.371  & 0.990 \\ \hline
+%Baseline NNMF       & 0.00003& 0.110 \\ \hline
+%Baseline CL         & -      & 0.944 \\ \hline
+%Baseline CM         & -      & 0.999 \\ \hline
+%\end{tabular}
+%\caption{Percentage of documents assigned to at least one semantic topic.}
+%\end{table}
+
+
+\begin{table*}
+\begin{scriptsize}
+\caption{Results obtained by \method compared with 3 baselines}\label{tbl:topics}
+\begin{tabular}{|c||c|c|c|c||c|c|c|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Dataset}&\multirow{2}{*}{Method}&\multicolumn{2}{c|}{\#Topics}&Docs &\multirow{2}{*}{Purity}&\multicolumn{2}{|c|}{1-1\_1-1} &\multicolumn{2}{c|}{1-1\_N-1} &\multicolumn{2}{c|}{1-N\_N-1} &\multicolumn{2}{|c|}{1-N\_N-N}\\ \cline{3-4}\cline{7-14}
+         		      &          &     Initial    &      Final       & with Topics    &  & e-prec.   & e-recall          & e-prec.   & e-recall          & e-prec.   & e-recall          & e-prec.   & e-recall          
+\\ \hline \hline
+\multirow{8}{*}{Observatory} 
+ & UPsCAle-0.35 & 115& 26 & 0.808 & 0.684 & 0.605 & 0.283 & 0.471 & 0.365 & 0.436 & 0.396 & 0.763 & 0.854
+\\
+ & UPsCAle-0.45 & 171 & 34.333 &0.880 & 0.695 & 0.551 & 0.252 & 0.458 & 0.332 & 0.416 & 0.356 & 0.760 & 0.863
+\\ 
+ & UPsCAle-0.55 & 242& 42.333 & 0.900 & 0.742 & 0.637 & 0.171 & 0.447 & 0.243 & 0.417 & 0.270 & 0.766 & 0.870
+\\
+ & UPsCAle & 25&9  & 0.395 & 0.725  & 0.623 & 0.489 & 0.562 & 0.537 & 0.541 & 0.544 & 0.840 & 0.864
+\\ \cline{2-14}
+ & SVD+HC & - &2,333 & 0.999 & 0.3539 & 0.898 & 0.024 & 0.776 & 0.775 & 0.776 & 0.775 & 0.956 & 0.956
+\\ 
+ & NNMF+EM & 25 &10 &0.944 & 0.5608 & 0.514 & 0.364 & 0.476 & 0.440 & 0.476 & 0.440 & 0.828 & 0.828
+\\ 
+ & NNMF & - &6 &0.110 & 0.561 & 0.769 & 0.713 & 0.774 & 0.786 & 0.772 & 0.785 & 0.930 & 0.931
+\\ \hline	
+\multirow{6}{*}{AgNews} 
+ & UPsCAle-0.35 & 59&17.2 &0.008 & 0.568 & 0.201 & 0.193 & 0.223 & 0.219 & 0.216 & 0.210 & 0.765 & 0.833
+\\ 
+ & UPsCAle-0.45 & 103&23.6 &0.058 & 0.703 & 0.319 & 0.215 & 0.273 & 0.236 & 0.285 & 0.241 & 0.765 & 0.790
+\\ 
+ & UPsCAle-0.55 & 163&36.6 &0.216 & 0.768 & 0.303 & 0.152 & 0.245 & 0.171 & 0.224 & 0.167 & 0.772 & 0.808
+ \\
+  & UPsCAle &154 &32.8 &0.279 &0.801 & 0.299 & 0.136 & 0.253 & 0.152 & 0.231 & 0.159 & 0.766 & 0.794
+\\ \cline{2-14}
+ & NNMF & - & 11 & - & - & - & - & - & - & - & - & - & - 
+\\ \hline
+\end{tabular}
+
+
+\end{scriptsize}
+\end{table*}
+
+% \begin{table*}
+% \begin{tabular}{|l|l|l|l|l|l|l|l|}
+%  &  &  &  & C -- R (S: 0.6740) &  &\\ \hline
+% Database & Method & Representativity & Clusters & Purity & Precision & Recall\\ \hline
+% \multirow{8}{*}{webObservatory} & \multirow{3}{*}{Framework} & 0,35 & 4 & 0.690  --  0.587 & 0,387 & 0,417 \\ \cline{3-7}
+%  &  & 0,45 & 27 & 0.730  --  0.650 & 0,501 & 0,501\\ \cline{3-7}
+%  &  & 0,55 & 7 & 0.574  --  0.481 & 0,323 & 0,387\\ \cline{2-7}
+%  & Baseline CM & ----- & 2333 & 0.351  --  0.327 & 0,835 & 0,111\\ \cline{2-7}
+%  & Baseline CL & ----- & 10 & 0.561  --  0.488 & 0,329 & 0,286\\ \cline{2-7}
+%  & Baseline NNMF & -- & 6 & 0,796  --  0,599 & 0,248 & 0,249\\ \hline
+% \multirow{6}{*}{agNews} & \multirow{3}{*}{Framework} & 0,35 & 16 & 0.611  --  0.544 & 0,147 & 0,147\\ \cline{3-7}
+%  &  & 0,45 & 23 & 0.720  --  0.702 & 0,147 & 0,147\\ \cline{3-7}
+%  &  & 0,55 & 32 & 0.728  --  0.661 & 0,145 & 0,147\\ \cline{2-7}
+%  & Baseline NNMF & -- & 5 & 0,669  --  0,662 & 0,147 & 0,147\\ \hline
+% \end{tabular}
+% \end{table*}

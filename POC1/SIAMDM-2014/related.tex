@@ -1,0 +1,98 @@
+\section{Related Work}\label{sec:related}
+
+%Understanding user behaviors in social networks have become a primary goal of several researches recently \cite{}. Indeed, understanding how users behave, interact and discuss reveals useful information for various scientific and commercial  applications, such as recommendation of services or information, modeling of community formation and modeling of information  propagation \cite{. Thus, a growing number of efforts aim to identify groups of Social Media users with common  interests, expressed by textual data published in the Social Media. Proposals for this task range from traditional clustering algorithms applied to textual data \cite{ to Natural Language Process (NLP) based methods \cite{chen1995topic}.
+
+%Differently, this work aims to characterize the interests related to each group of users previously identified in a domain, as  well as providing meaningful descriptions for these interests. Specifically, we consider as `interest' a semantic topic recurrently  discussed in a set of posts published by members of a specific group of users. Also, we consider that such groups of users were  previsously defined, for example, by some attribute inherent to users or by any existing proposal for identifying group of users  applied to Social Media content. An immediate question in this case is: why does our goal differ from the identification of group  of users, since the definition of these groups is usually based on modeling common interests? A first problem is that several of the  techniques used for grouping users do not concern to provide semantic topics interpretable by humans \cite{ayad2002topic,li2003topic}.  Thus, often the goal is to generate a model able to identify dependencies that allow the definition of groups. However, these  dependencies may not explain the interests related to each group. Second, even the few studies focused in describing semantic  topics exhibit two main limitations. Current works focus on defining the semantic topics defined by a single user \cite{abel2011semantic}.  It differs significantly from group analyses since different users express interest on a same topic through different vocabularies.  Hence, considering them individually and summarizing individual results may not cover some common interests. Further, these works  are based on a poor definition of what represents a `semantic groups`. As aforementioned, we assume that a tangible definition of `semantic' requires three requirements: coehsion, representativity and fragmentation. Most of the existing proposal take into account only of of these requirements, providing incomplete, redundant or not well defined semantic topics.
+%A variety of works for characterizing user behavior in social media were proposed in the past years \cite{kaplan2010users,Benevenuto2009}. However, the great majority of methods focused on users wants to classify them according to a set of predefined categories, such as political view , or according to other personal information, such as location, age, among others \cite{pennacchiotti2011democrats}.
+
+This section reviews methods for both semantic
+topic identification and user profiling.
+%and discuss how they compare to the method proposed here.
+%In the second part we analyze methods for user profiling.
+Concerning topic identification, there are four main efforts in the literature: (i) clustering, which includes traditional data mining algorithms applied to textual data \cite{aggarwal2012mining}; (ii) natural-language processing (NLP) methods, well-known as the most effective for semantic analysis in several scenarios \cite{mihalcea2011graph} but also the ones that require most effort to define properly the semantic representation in each domain; (iii) probabilistic, such as Latent Dirichlet Allocation (LDA), which employ a similar interpretation to data as linear algebra methods and (iv) non-probabilistic, which are the methods we are interested in.
+
+
+%The first group of efforts comprises traditional clustering algorithms that explore data correlations in order to identify distinct groups of topics. %\cite{ozmutlu2006automatic}. This group includes traditional data mining algorithms applied to textual data \cite{aggarwal2012mining}.%,pons2007topic}.  
+%The major problem with this approach
+%is that the data correlations consider the existence of recurring and directly observable patterns in the dataset. This is usually not the case in textual data, since one concept can be described in many ways. 
+
+Non-probabilistic methods, such as matrix
+factorization and sparse coding
+\cite{bai:2013,cheng:2013}, assume that there are few latent factors not directly observable from
+data that are able to represent most of the original data.  In this case,
+each latent factor is defined as a semantic topic. 
+%, as they are derived from co-occurrences among sets of items.  
+As one may refer to the same semantic topic using different vocabularies, we say this type of technique actually generates fragmented or even redundant representations
+of semantic topics, known as semantic sub-topics. 
+
+In order to deal with the problem of redundancy, Kuhn et al.
+\cite{kuhn2007semantic} uses a Latent Semantic Indexing (LSI) method followed
+by a clustering process to identify semantic topics from the source codes of a
+system. 
+%Their idea was to better explain the general components of the code. 
+Their method identifies latent factors in the raw data, and then represents
+the original files using the new N-dimensional space defined by the $N$ latent
+factors. Next, it clusters the files using a co-variance matrix  represented
+on the top of this new space of files. 
+%The work proposed here goes into this direction.  
+The main drawback of this approach is the use of co-variance
+matrices, which do not scale to large volumes of data.
+
+%ADDED
+For short texts such as tweets, matrix factorization methods also have problems dealing with highly sparse data, a problem attacked in \cite{cheng:2013}. Here we minimize this problem by using a set of tweets instead of a single one. 
+
+%The third group refers to probabilistic methods, such as Latent Dirichlet Allocation (LDA), which
+%employ a similar interpretation to data as linear algebra methods. However,
+%they use a statistical framework of analysis, ensuring a better modeling of
+%uncertain data \cite{ramage2010characterizing}.  Their main drawback
+%of is in the complexity for identifying appropriate models and
+%parameters that identify semantic topics correctly.
+
+%, which has been shown as a practical challenge. 
+
+%Finally, the fourth group includes techniques derived from NLP. They are well-known as the most effective methods for semantic analysis in several scenarios \cite{mihalcea2011graph}. However, these methods are also the most expensive, requiring a significant human effort to define properly the semantic representation in each domain \cite{liu2004conceptnet}.Hence, applying this type of methods in environments characterized by dynamicity and huge volumes of data as social media is not appropriate.
+
+%WMJ: this last argument is quite weak
+
+Regarding user profiling methods, they can build user profiles from different
+user characteristics, which include user preferences (found in messages),
+personal information (such as gender and location) or social network behavior
+(usage time, number of posts per day, among others)
+\cite{tao:2011,pennacchiotti2011democrats}.  Previous works have
+already used the text from tweets to help classifying users, and even applied
+linear algebra methods, such as LDA, in order to find topics that are not
+explicitly mentioned in the text. Pennacchiotti et al.
+\cite{pennacchiotti2011democrats}, for instance, proposes an architecture that
+builds user profiles in order to classify Twitter users with regards to
+particular political views (e.g., Democrats vs.  Republicans).  The authors use
+features such as the linguistic content of the tweets posted by a specific user
+and his/her social behavior. The information extracted is given to a machine
+learning algorithm that classifies users as republicans or democrats.  A
+description of interests related to each class is also provided by an LDA-based
+method. However, the main problem in this case is that the authors assume the
+existence of training data, which is not always available for semantic
+analysis. 
+
+Tao et al. \cite{tao:2011} and Abel et al. \cite{abel2011semantic}, in
+contrast, use tweets to infer user interest profiles. Here, instead of
+identifying general topics, the authors first enrich the tweets by identifying
+and extracting a set of 39 pre-defined entities using
+OpenCalais\footnote{www.opencalais.com}, and also consider hashtags.
+\cite{tao:2011} also uses a set of 19 predefined topics to identify the users
+preferences. The identified preferences are weighted and shown with clould tags
+and graphs. In \cite{abel2011semantic}, in turn, as the final goal of the
+authors is to use the profiles to improve news recommendation, the authors also
+identify links in tweets and associate them with the original webpages, which in
+most cases refer to news. Topics are then extracted from these identified news
+also using the OpenCalais taxonomy. The authors compared profiles built with
+different combinations of the information described above, and concluded that
+entity-based and topic-based profiles make the semantics of the preferences
+much more explicit than other types of information.
+
+From the methods mentioned above, the works of \cite{kuhn2007semantic} and \cite{pennacchiotti2011democrats} are the most similar to ours.
+However, in contrast with \cite{kuhn2007semantic}, \method represents a scalable and robust strategy for modeling semantic topics. It is also independent of training data, and does not require a set of predefined topics to work with.
+%We do that by producing a hierarchical clustering of the latent factors generated by a NMF method based on a probabilistic transition graph among them.  
+
+
+
+
