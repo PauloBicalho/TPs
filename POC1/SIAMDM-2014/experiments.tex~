@@ -60,10 +60,10 @@ of $T_j$ being a fragment of $T_i$.
 
 % \begin{figure*}[!th]
 % \centering
-% \subfigure[AgNews]{{file=figures/topicDistributionAgnews.eps,width=1.53in,height=1.13in}} \quad
-% \subfigure[Observatory]{{file=figures/topicDistributionObservatory.eps, width=1.53in,height=1.13in}}
-% \subfigure[AgNews]{{file=figures/numTopicsPerDocAgNews.eps, height=1.53in,width=1.13in,angle=-90}}
-% \subfigure[Observatory]{{file=figures/numTopicsPerDocObservatory.eps, height=1.53in,width=1.13in,angle=-90}}
+% \subfigure[AgNews]{\epsfig{file=figures/topicDistributionAgnews.eps,width=1.53in,height=1.13in}} \quad
+% \subfigure[Observatory]{\epsfig{file=figures/topicDistributionObservatory.eps, width=1.53in,height=1.13in}}
+% \subfigure[AgNews]{\epsfig{file=figures/numTopicsPerDocAgNews.eps, height=1.53in,width=1.13in,angle=-90}}
+% \subfigure[Observatory]{\epsfig{file=figures/numTopicsPerDocObservatory.eps, height=1.53in,width=1.13in,angle=-90}}
 % \caption{Topics most frequently assigned to documents (a) and (b), and the average number of topics assigned per document (c) and (d) for both agNews and Observatory}
 % \label{fig:histograms}
 % \end{figure*}
@@ -77,33 +77,7 @@ For the first three cases, e-precision and e-recall are calculated using the tra
 
 In cases where the number of topics found is greater than the number of actual classes, depending on which type of topic-class mapping is being used, only the topics with the highest number of documents are mapped to the real classes, and this is reflected in the recall of the methods. 
 \begin{figure}[!t]
-%	\subfigure{
-%		\begin{minipage}[c]{.05\textwidth}
-%		\end{minipage}
-%		\begin{minipage}[c]{.95\textwidth}
-%			\hspace{2.3cm}
-%			\begin{scriptsize} \textbf{AgNews} \end{scriptsize} 
-%			\hspace{2.6cm}
-%			\begin{scriptsize} \textbf{Observatory} \end{scriptsize}
-%		\end{minipage}
-%	}\\
-%	\subfigure{
-%		\begin{minipage}[c]{.05\textwidth}
-%			\vspace{-0.7cm}
-%			\hspace{-0.6cm}
-%			\centering
-%				\begin{sideways}
-%					\begin{scriptsize} \textbf{Freq. Assigned Topics} \end{scriptsize}
-%				\end{sideways}
-%		\end{minipage}
-%		\begin{minipage}[c]{.45\textwidth}
-%		\vspace{-0.4cm}
-%		\hspace{-0.5cm}
-%		\centering
-%		\subfigure{{file=figures/topicDistributionAgnews.eps,width=1.53in,height=1.13in}}
-%		\subfigure{{file=figures/topicDistributionObservatory.eps, width=1.53in,height=1.13in}}
-%		\end{minipage}
-%	}
+\centering
 	\subfigure{
 		\begin{minipage}[c]{.05\textwidth}
 			\vspace{-0.6cm}
@@ -117,8 +91,15 @@ In cases where the number of topics found is greater than the number of actual c
 			\vspace{-0.4cm}
 			\hspace{-0.5cm}
 			\centering
-			\subfigure{{file=figures/numTopicsPerDocObservatory.eps, height=1.53in,width=1.13in,angle=-90}}
-			\subfigure{{file=figures/numTopicsPerDocAgNews.eps, height=1.53in,width=1.13in,angle=-90}}
+\begin{minipage}[b]{0.45\linewidth}
+			\subfigure{\epsfig{file=figures/numTopicsPerDocObservatory.eps, height=1.73in,width=1.10in,angle=-90}}
+\end{minipage}
+
+\hfill
+
+\begin{minipage}[b]{0.45\linewidth}
+			\subfigure{\epsfig{file=figures/numTopicsPerDocAgNews.eps, height=1.73in,width=1.10in,angle=-90}}
+\end{minipage}
 
 		\end{minipage}
 	}
@@ -145,11 +126,11 @@ Table~\ref{tbl:topics} shows the average results obtained over 10 runs of the me
 
 \begin{figure}[!tb]
  \centering
- \subfigure[Observatory]{{file=figures/topicsFragmentationObservatory.eps,height=1.4in,width=1.5in}}
-% \subfigure[Observatory]{{file=figures/fragmentation-Observatory-KT.eps, width=1.8in,height=1.45in}}
-% \subfigure[Observatory]{{file=figures/fragmentation-Observatory-CL.eps, width=1.8in,height=1.45in}}
-% \subfigure[AgNews]{{file=figures/fragmentation-agnews-upscale.eps,width=1.8in,height=1.45in}} %0.35
- \subfigure[AgNews]{{file=figures/topicsFragmentationAgNews.eps,height=1.4in,width=1.5in}}
+ \subfigure[Observatory]{\epsfig{file=figures/topicsFragmentationObservatory.eps,height=1.4in,width=1.5in}}
+% \subfigure[Observatory]{\epsfig{file=figures/fragmentation-Observatory-KT.eps, width=1.8in,height=1.45in}}
+% \subfigure[Observatory]{\epsfig{file=figures/fragmentation-Observatory-CL.eps, width=1.8in,height=1.45in}}
+% \subfigure[AgNews]{\epsfig{file=figures/fragmentation-agnews-upscale.eps,width=1.8in,height=1.45in}} %0.35
+ \subfigure[AgNews]{\epsfig{file=figures/topicsFragmentationAgNews.eps,height=1.4in,width=1.5in}}
  \caption{Distribution of $MRVI$ among all pairs of topics}
  \label{fig:mrvi}
  \end{figure}
@@ -209,7 +190,7 @@ iterations.
 
 %\begin{figure}[!th]
 %\center
-%{file=figures/postFrequencyElection.eps,width=2in,height=1.5in}
+%\epsfig{file=figures/postFrequencyElection.eps,width=2in,height=1.5in}
 %\caption{Post frequency per user for Election}
 %\label{fig:election}
 %\end{figure}

@@ -11,8 +11,8 @@
 
 \begin{sidewaystable}
 %\begin{table*}
-%\begin{scriptsize}
-\caption{ Results obtained for Observatory and AgNews. Documents with topics represent the number of documents assigned to at least one topic. The metrics of precision and recall are calculated under these documents. The four cenarious presented considering different mapping of Doc\_Topic\_Topic\_Class. \ }
+\begin{scriptsize}
+\caption{\begin{scriptsize} Results obtained for Observatory and AgNews. Documents with topics represent the number of documents assigned to at least one topic. The metrics of precision and recall are calculated under these documents. The four cenarious presented considering different mapping of Doc\_Topic\_Topic\_Class. \ \end{scriptsize} }
 \label{tbl:topics}
 
 
@@ -128,7 +128,7 @@ Cohesion&\multirow{2}{*}{Method}&\multicolumn{2}{c|}{\#Topics}&Docs &\multirow{2
 
 
 
-%\end{scriptsize}
+\end{scriptsize}
 %\end{table*}
 
 \end{sidewaystable}
