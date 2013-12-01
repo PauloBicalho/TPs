@@ -1,0 +1,18 @@
+Para compilar o compilador integrado basta executar um make;
+
+ $ make
+
+Caso de algum problema, favor entrar nas pastas front e back e tbm executar um make.
+
+Para executar o compilador
+
+ $ ./pauloCompiler arquivo_fonte saida_front saida_back
+
+Os arquivos com nome de saída armazenarão as saidas do front-end e do back-end;
+
+Um conjunto de testes foi disponibilizado na pasta tests_in
+Para executá-los, basta executar o seguinte comando após a compilação.
+
+ $ make test
+
+As saídas serão armazenadas na pasta tests_out

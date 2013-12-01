@@ -1,0 +1,56 @@
+Constant Pool:
+{
+	0: bipush	0
+	1: istore	1
+	2: iload	1
+	3: bipush	10
+	4: if_icmpge	31
+	5: bipush	0
+	6: istore	2
+	7: iload	2
+	8: bipush	10
+	9: if_icmpge	26
+	10: iload	1
+	11: bipush	80
+	12: imul
+	13: istore	3
+	14: iload	2
+	15: bipush	8
+	16: imul
+	17: istore	4
+	18: iadd
+	19: istore	5
+	20: bipush	0
+	21: iload	2
+	22: bipush	1
+	23: iadd
+	24: istore	2
+	25: goto	7
+	26: iload	1
+	27: bipush	1
+	28: iadd
+	29: istore	1
+	30: goto	2
+	31: bipush	0
+	32: istore	1
+	33: iload	1
+	34: bipush	10
+	35: if_icmpge	52
+	36: iload	1
+	37: bipush	80
+	38: imul
+	39: istore	7
+	40: iload	1
+	41: bipush	8
+	42: imul
+	43: istore	8
+	44: iadd
+	45: istore	9
+	46: bipush	1
+	47: iload	1
+	48: bipush	1
+	49: iadd
+	50: istore	1
+	51: goto	33
+	52: 
+}

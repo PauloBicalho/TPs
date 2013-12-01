@@ -1,0 +1,8 @@
+{
+	int i; int j; float k;
+
+	k = 10.0;
+
+	i = k;
+
+}

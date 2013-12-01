@@ -1,0 +1,18 @@
+Para compilar o back-end basta executar um make;
+
+ $ make
+
+Caso de algum problema, verificar versões do c++ (necessário -std=++0x)
+
+Para executar o back-end
+
+ $ ./backend arquivo_fonte saida_back
+
+O arquivo said_back irá armazenar a saida do back-end
+
+Um conjunto de testes foi disponibilizado na pasta tests_in
+Para executá-los, basta executar o seguinte comando após a compilação.
+
+ $ make test
+
+As saídas serão armazenadas na pasta tests_out

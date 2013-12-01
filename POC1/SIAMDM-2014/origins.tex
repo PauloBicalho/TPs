@@ -1,0 +1,11 @@
+\section{Origins and General Discussion}
+
+The previous sections are part of an article sent to the SIAM International Conference on Data Mining 2014. It was a collaborative work with two doctorate students, namely Tiago Cunha and Fernando Mourão. I have worked mostly in the first 7 steps of the framework (see figure \ref{frameworkFig}), implementing and discussing ideas and hypothesis with the team.
+
+The objectives of POC 1 were successfully achieved, and I was able to exercise the acquired knowledge throughout my undergraduate course.
+During the development of the framework, new problems and ideas for future work were found. The first, and most important, is that the matrix of $posts \times words$ is very sparse and this can be a problem for the NMF algorithm. Dealing with sparsity is the first goal for POC 2. We will investigate a similar approaches to the one proposed in \cite{cheng:2013}.
+
+The second objective of POC 2 is to make UPsCAle an online method. Currently, it is considered an offline method since it uses static input data, e.g. data do not vary over time. As we want to integrate it with \textit{Observatório da Web} we need to learn how to deal with streams of tweets and news. 
+
+
+

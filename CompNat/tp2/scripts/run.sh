@@ -4,12 +4,12 @@ exe=$1
 db=$2
 out=$3
 
-stdAnts=100
-stdIt=500
+stdAnts=$4
+stdIt=$5
 stdEvapRate=0.05
-stdAlpha=$4
-stdBeta=$5
-evapRate=$6
+stdAlpha=2
+stdBeta=4
+evapRate=0.05
 
 mkdir -p $out/numAnts
 mkdir -p $out/numIt
@@ -19,7 +19,7 @@ mkdir -p $out/beta
 
   for seed in {1..20..1}; do
     echo "$exe $db $stdAnts $stdIt 99999999 0 $evapRate $stdAlpha $stdBeta $seed > $out/evapRate/${evapRate}_${seed}.log"
-    #time $exe $db $stdAnts $stdIt 99999999 0 $evapRate $stdAlpha $stdBeta $seed > $out/evapRate/${evapRate}_${seed}.log
+    time $exe $db $stdAnts $stdIt 99999999 0 $evapRate $stdAlpha $stdBeta $seed > $out/evapRate/${evapRate}_${seed}.log
   done
 
   echo "Agrupando resultados"
