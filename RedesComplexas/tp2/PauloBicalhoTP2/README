@@ -1,0 +1,7 @@
+Put all datasets into db folder and type:
+
+./runAll.sh
+
+or type
+
+python getTriangles.py <input_file>

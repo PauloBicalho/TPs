@@ -72,7 +72,7 @@
 \usepackage{booktabs}
 %\usepackage{graphicx}
 \usepackage{rotating}
-%\usepackage{epstopdf}
+\usepackage{epstopdf}
 
 \sloppy
 
