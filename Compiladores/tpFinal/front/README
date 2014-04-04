@@ -1,0 +1,18 @@
+Para compilar o front-end basta executar um make;
+
+ $ make
+
+Caso de algum problema, verificar versões do c++ (necessário -std=++0x)
+
+Para executar o front-end
+
+ $ ./frontend arquivo_fonte saida_front
+
+O arquivo said_front irá armazenar a saida do front-end
+
+Um conjunto de testes foi disponibilizado na pasta tests_in
+Para executá-los, basta executar o seguinte comando após a compilação.
+
+ $ make test
+
+As saídas serão armazenadas na pasta tests_out

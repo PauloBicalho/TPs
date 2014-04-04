@@ -1,11 +1,17 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.3.5)  25 NOV 2013 17:05
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.9)  29 NOV 2013 14:05
 entering extended mode
  %&-line parsing enabled.
 **paper.tex
 (./paper.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, portuguese, loaded.
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size12.clo
@@ -48,7 +54,9 @@ Package ifvtex Info: VTeX not detected.
 \Gm@odd@mp=\dimen105
 \Gm@even@mp=\dimen106
 \Gm@dimlist=\toks15
-) (./caption2.sty
+
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg))
+(./caption2.sty
 Package: caption2 2002/08/03 v2.1 Customising captions (AS)
 \captionmargin=\dimen107
 \captionwidth=\dimen108
@@ -56,8 +64,7 @@ Package: caption2 2002/08/03 v2.1 Customising captions (AS)
 Package caption2 Info: Running in caption2 v2.0 compatibility mode on input lin
 e 147.
 \captionlinewidth=\dimen110
-)
-(/usr/share/texmf-texlive/tex/latex/psnfss/times.sty
+) (/usr/share/texmf-texlive/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
 \c@instn=\count90
@@ -591,109 +598,32 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 
-
-LaTeX Warning: Citation `abel:2011' on page 1 undefined on input line 13.
-
-
-LaTeX Warning: Citation `pennacchiotti2011democrats' on page 1 undefined on inp
-ut line 23.
-
-
-LaTeX Warning: Citation `abel2011semantic' on page 1 undefined on input line 23
-.
-
-
-LaTeX Warning: Citation `zheleva:2009' on page 1 undefined on input line 33.
-
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `pons2007topic' on page 2 undefined on input line 61.
-
-
-LaTeX Warning: Citation `berry2007algorithms' on page 2 undefined on input line
- 62.
-
-
-LaTeX Warning: Citation `cheng:2013' on page 2 undefined on input line 64.
-
-) (./related.tex
-
-LaTeX Warning: Citation `aggarwal2012mining' on page 2 undefined on input line 
-12.
-
-
-LaTeX Warning: Citation `mihalcea2011graph' on page 2 undefined on input line 1
-2.
-
-
-LaTeX Warning: Citation `bai:2013' on page 2 undefined on input line 21.
-
-
-LaTeX Warning: Citation `cheng:2013' on page 2 undefined on input line 21.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./related.tex
+Underfull \hbox (badness 1253) in paragraph at lines 19--27
+[]\OT1/ptm/m/n/12 Non-probabilistic meth-ods, such as ma-trix fac-tor-iza-tion 
+and sparse cod-ing
+ []
 
 [2]
+Underfull \hbox (badness 1448) in paragraph at lines 92--95
+[]\OT1/ptm/m/n/12 From the meth-ods men-tioned above, the works of [[]] and
+ []
 
-LaTeX Warning: Citation `kuhn2007semantic' on page 3 undefined on input line 29
-.
-
-
-LaTeX Warning: Citation `cheng:2013' on page 3 undefined on input line 42.
-
-
-LaTeX Warning: Citation `tao:2011' on page 3 undefined on input line 61.
-
-
-LaTeX Warning: Citation `pennacchiotti2011democrats' on page 3 undefined on inp
-ut line 61.
-
-
-LaTeX Warning: Citation `pennacchiotti2011democrats' on page 3 undefined on inp
-ut line 65.
-
-
-LaTeX Warning: Citation `tao:2011' on page 3 undefined on input line 76.
-
-
-LaTeX Warning: Citation `abel2011semantic' on page 3 undefined on input line 76
-.
-
-
-LaTeX Warning: Citation `tao:2011' on page 3 undefined on input line 81.
-
-
-LaTeX Warning: Citation `abel2011semantic' on page 3 undefined on input line 83
-.
-
-
-LaTeX Warning: Citation `kuhn2007semantic' on page 3 undefined on input line 92
-.
-
-
-LaTeX Warning: Citation `pennacchiotti2011democrats' on page 3 undefined on inp
-ut line 92.
-
-
-LaTeX Warning: Citation `kuhn2007semantic' on page 3 undefined on input line 93
-.
-
-) (./method.tex [3]
-
-LaTeX Warning: Citation `lin2007convergence' on page 4 undefined on input line 
-44.
-
+[3]) (./method.tex [4]
 Package epstopdf Info: Source file: <figures/framework.eps>
-(epstopdf)                    date: 2013-10-13 15:52:14
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 486868 bytes
 (epstopdf)             Output file: <figures/framework-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-10-13 16:30:48
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 94303 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/framework-eps-conve
 rted-to.pdf figures/framework.eps>
 (epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
-<figures/framework-eps-converted-to.pdf, id=18, 845.1575pt x 597.23125pt>
+
+<figures/framework-eps-converted-to.pdf, id=24, 845.1575pt x 597.23125pt>
 File: figures/framework-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/framework-eps-converted-to.pdf>
@@ -704,25 +634,11 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 51.
-
-
-LaTeX Warning: Citation `johnson2002applied' on page 4 undefined on input line 
-64.
-
-
-LaTeX Warning: Citation `johnson2002applied' on page 4 undefined on input line 
-68.
-
-[4] [5 <./figures/framework-eps-converted-to.pdf>]
+ [5 <./figures/framework-eps-converted-to.pdf>] [6]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 149.
 
-
-Underfull \vbox (badness 2452) has occurred while \output is active []
-
- [6]
 LaTeX Font Info:    Calculating math sizes for size <> on input line 152.
-
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
 (Font)              size <5> substituted on input line 152.
@@ -761,33 +677,19 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
-[7]
-Underfull \vbox (badness 1082) has occurred while \output is active []
 
- [8])
-(./experiments.tex [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `witten:2005' on page 10 undefined on input line 24.
-
-
-LaTeX Warning: Citation `kao2004mining' on page 10 undefined on input line 35.
-
-
-LaTeX Warning: Citation `witten:2005' on page 10 undefined on input line 76.
-
-
-LaTeX Warning: Citation `tsoumakas2007multi' on page 10 undefined on input line
- 76.
-
-[10]
+ [7]
+[8]) (./experiments.tex [9] [10]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 103.
 Package epstopdf Info: Source file: <figures/numTopicsPerDocObservatory.eps>
-(epstopdf)                    date: 2013-08-29 03:30:26
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 23678 bytes
 (epstopdf)             Output file: <figures/numTopicsPerDocObservatory-eps-con
 verted-to.pdf>
-(epstopdf)                    date: 2013-09-23 13:41:10
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 7538 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/numTopicsPerDocObse
 rvatory-eps-converted-to.pdf figures/numTopicsPerDocObservatory.eps>
@@ -804,11 +706,11 @@ Overfull \hbox (42.4366pt too wide) in paragraph at lines 103--103
  []
 
 Package epstopdf Info: Source file: <figures/numTopicsPerDocAgNews.eps>
-(epstopdf)                    date: 2013-08-28 22:23:32
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 23219 bytes
 (epstopdf)             Output file: <figures/numTopicsPerDocAgNews-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2013-08-28 22:29:02
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 7136 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/numTopicsPerDocAgNe
 ws-eps-converted-to.pdf figures/numTopicsPerDocAgNews.eps>
@@ -823,30 +725,15 @@ Overfull \hbox (42.4366pt too wide) in paragraph at lines 103--103
 [][] 
  []
 
-
-LaTeX Warning: Citation `kuhn2007semantic' on page 11 undefined on input line 1
-10.
-
-
-LaTeX Warning: Citation `kuhn2007semantic' on page 11 undefined on input line 1
-11.
-
-
-LaTeX Warning: Reference `tbl:topics' on page 11 undefined on input line 123.
-
-
-LaTeX Warning: Citation `kuhn2007semantic' on page 11 undefined on input line 1
-23.
-
 [11 <./figures/numTopicsPerDocObservatory-eps-converted-to.pdf> <./figures/numT
 opicsPerDocAgNews-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/topicsFragmentationObservatory.eps
 >
-(epstopdf)                    date: 2013-10-13 19:23:00
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 25210 bytes
 (epstopdf)             Output file: <figures/topicsFragmentationObservatory-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2013-10-13 19:25:32
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 8054 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/topicsFragmentation
 Observatory-eps-converted-to.pdf figures/topicsFragmentationObservatory.eps>
@@ -859,11 +746,11 @@ File: figures/topicsFragmentationObservatory-eps-converted-to.pdf Graphic file
 (type pdf)
  <use figures/topicsFragmentationObservatory-eps-converted-to.pdf>
 Package epstopdf Info: Source file: <figures/topicsFragmentationAgNews.eps>
-(epstopdf)                    date: 2013-10-12 21:09:50
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 28396 bytes
 (epstopdf)             Output file: <figures/topicsFragmentationAgNews-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2013-10-13 16:31:28
+(epstopdf)                    date: 2013-11-27 09:21:53
 (epstopdf)                    size: 9682 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/topicsFragmentation
 AgNews-eps-converted-to.pdf figures/topicsFragmentationAgNews.eps>
@@ -881,7 +768,7 @@ Overfull \hbox (44.21089pt too wide) in paragraph at lines 20--128
  []
 
 )
-Underfull \vbox (badness 2591) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./figures/topicsFragmentationObservatory-eps-converted-to.pdf> <./figures
 /topicsFragmentationAgNews-eps-converted-to.pdf>] [13]
@@ -900,53 +787,29 @@ File: figures/cloudTags/top3-elections.png Graphic file (type png)
 <figures/cloudTags/top6-elections.png, id=97, 857.2025pt x 470.75874pt>
 File: figures/cloudTags/top6-elections.png Graphic file (type png)
 
-<use figures/cloudTags/top6-elections.png> (./unlabeledTable.tex) [14 <./figure
-s/cloudTags/top1-elections.png (PNG copy)> <./figures/cloudTags/top2-elections.
-png (PNG copy)> <./figures/cloudTags/top3-elections.png (PNG copy)> <./figures/
-cloudTags/top6-elections.png (PNG copy)>]
+<use figures/cloudTags/top6-elections.png> (./unlabeledTable.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `kao2004mining' on page 15 undefined on input line 200.
-
-
-
-LaTeX Warning: Reference `tbl:unlabeled' on page 15 undefined on input line 201
-.
-
-
-LaTeX Warning: Reference `fig:election' on page 15 undefined on input line 203.
-
-
-
-LaTeX Warning: Reference `fig:election' on page 15 undefined on input line 204.
-
-
-
-LaTeX Warning: Reference `fig:election' on page 15 undefined on input line 207.
-
-
-) (./discussion.tex [15]
-
-LaTeX Warning: Citation `cheng:2013' on page 16 undefined on input line 16.
-
-) (./paper.bbl [16]) [17] (./paper.aux)
+ [14 <./figures/cloudTags/top1-elections.png (PNG copy)> <./figures/cloudTags/t
+op2-elections.png (PNG copy)> <./figures/cloudTags/top3-elections.png (PNG copy
+)> <./figures/cloudTags/top6-elections.png (PNG copy)>]) (./discussion.tex [15]
+)
+(./origins.tex) (./paper.bbl [16]) [17] (./paper.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3975 strings out of 495041
- 54671 string characters out of 1181898
- 135595 words of memory out of 3000000
- 6993 multiletter control sequences out of 15000+50000
+ 3982 strings out of 493848
+ 54881 string characters out of 1152823
+ 137002 words of memory out of 3000000
+ 7087 multiletter control sequences out of 15000+50000
  43455 words of font info for 93 fonts, out of 3000000 for 9000
- 30 hyphenation exceptions out of 8191
+ 714 hyphenation exceptions out of 8191
  41i,15n,30p,1971b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/ty
@@ -963,7 +826,7 @@ onts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols
 /texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts
 /type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/ut
 mr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (17 pages, 588043 bytes).
+Output written on paper.pdf (17 pages, 590330 bytes).
 PDF statistics:
  164 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
