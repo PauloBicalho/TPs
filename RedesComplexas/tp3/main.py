@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import pickle
 import sys
 import operator
+from scipy.stats import spearmanr
 
 
 def loadGraph(fileName):
@@ -69,6 +70,20 @@ def getDiff(d1,d2):
 
   return diff
 
+def spearmanCorrelation(d1,d2):
+  return spearmanr(d1.values(),d2.values())[0]
+
+def getNodosRank(d):
+  sorted_d = sorted(d.iteritems(),key=operator.itemgetter(1),reverse=True)
+  rank = [key for key,value in sorted_d]
+  return rank
+
+def getIntersection(rank1,rank2,t):
+  set1 = set(rank1[0:t])
+  set2 = set(rank2[0:t])
+
+  return set1.intersection(set2)
+
 def main():
 #  DG = loadGraph(sys.argv[1])
   print "Loaded"
@@ -81,6 +96,22 @@ def main():
   #pickle.dump(ht, open("ht.p",'wb'))
   ht = pickle.load(open("ht.p",'rb'))
   print "Hits ... Done"
+
+
+  print "Spearman Correlation PageRank - Authorities: " ,spearmanCorrelation(pr,ht[1])
+  print "Spearman Correlation PageRank - Hubs: " ,spearmanCorrelation(pr,ht[0])
+
+  rankPr = getNodosRank(pr)
+  rankAu = getNodosRank(ht[1])
+  rankHu = getNodosRank(ht[0])
+
+  for t in [5,10,20,50,100,150,200]:
+    print "[PageRank - Authorities] Intersection in top", t, ": ", len(getIntersection(rankPr,rankAu,t))
+    print "[PageRank - Hubs] Intersection in top", t, ": ", len(getIntersection(rankPr,rankHu,t))
+    print "[Authorities - Hubs] Intersection in top", t, ": ", len(getIntersection(rankAu,rankHu,t))
+
+
+
 
 
   plt.figure()
@@ -111,7 +142,6 @@ def main():
   plt.savefig("cdf_auto.pdf")
 
 
-
   plt.figure()
   plt.title("CDF of PageRank and Hits values")
   plt.xlabel('Value')
@@ -122,26 +152,13 @@ def main():
   #plt.plot(x_values, cdf, marker='o', linestyle='--', label = 'PageRank')
   plt.plot(x_values, cdf, label = 'PageRank')
   x_values,cdf = getCdf(ht[0])
-  #plt.plot(x_values, cdf, marker='o', linestyle='--', label = 'Hits - Hubs')
   plt.plot(x_values, cdf, label = 'Hits - Hubs')
   x_values,cdf = getCdf(ht[1])
-  #plt.plot(x_values, cdf, marker='o', linestyle='--', label = 'Hits - Authorities')
   plt.plot(x_values, cdf, label = 'Hits - Authorities')
   
   plt.legend(loc='best')
   plt.savefig("cdf.pdf")
 
-  #plt.figure()
-  #plt.title("CDF of the differences between Pagerank and Hits values")
-  #plt.xlabel('Value')
-  #plt.ylabel('Y = P(X <= x)')
-  
-  #diff = getDiff(pr,ht)
-  #plt.plot(diff.values(), cumulative=True, marker='o', linestyle='--')
-  #x_values,cdf = getCdf(diff)
-  #plt.plot(x_values, cdf, marker='o', linestyle='--')
-
-  #plt.savefig("cdf_diff.pdf")
 
 
 main()
