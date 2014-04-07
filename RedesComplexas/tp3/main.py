@@ -4,6 +4,7 @@ import pickle
 import sys
 import operator
 from scipy.stats import spearmanr
+from scipy.stats import pearsonr
 
 
 def loadGraph(fileName):
@@ -71,7 +72,11 @@ def getDiff(d1,d2):
   return diff
 
 def spearmanCorrelation(d1,d2):
-  return spearmanr(d1.values(),d2.values())[0]
+  keys = set(d1.keys())
+
+  v1 = [d1[x] for x in keys]
+  v2 = [d2[x] for x in keys]
+  return pearsonr(v1,v2)[0]
 
 def getNodosRank(d):
   sorted_d = sorted(d.iteritems(),key=operator.itemgetter(1),reverse=True)
@@ -85,20 +90,29 @@ def getIntersection(rank1,rank2,t):
   return set1.intersection(set2)
 
 def main():
-#  DG = loadGraph(sys.argv[1])
+  #DG = loadGraph(sys.argv[1])
   print "Loaded"
 
- # pr = calcPageRank(DG)
+  #pr = calcPageRank(DG)
   #pickle.dump(pr, open("pr.p",'wb'))
   pr = pickle.load(open("pr.p",'rb'))
   print "PageRank ... Done"
- # ht = calcHits(DG)
+  #ht = calcHits(DG)
   #pickle.dump(ht, open("ht.p",'wb'))
   ht = pickle.load(open("ht.p",'rb'))
   print "Hits ... Done"
 
+  sumDiff = 0
+  
+  keys1 = pr.keys()
+  keys2 = ht[1].keys()
+  for i in range(len(keys1)):
+    sumDiff += keys1[i] - keys2[i]
+  print sumDiff
+
 
   print "Spearman Correlation PageRank - Authorities: " ,spearmanCorrelation(pr,ht[1])
+  print "Spearman Correlation PageRank - Authorities: " ,spearmanCorrelation(pr,pr)
   print "Spearman Correlation PageRank - Hubs: " ,spearmanCorrelation(pr,ht[0])
 
   rankPr = getNodosRank(pr)
@@ -119,7 +133,9 @@ def main():
   plt.xlabel('Value')
   plt.ylabel('Y = P(X <= x)')
   x_values,cdf = getCdf(pr)
-  plt.xscale('log')
+  #plt.xscale('log')
+  plt.xlim(xmin=-0.01,xmax=0.2)
+  plt.ylim(ymax=1.1)
   plt.plot(x_values, cdf, label = 'PageRank')
   plt.savefig("cdf_pr.pdf")
   
@@ -127,7 +143,9 @@ def main():
   plt.title("CDF of Hubs values")
   plt.xlabel('Value')
   plt.ylabel('Y = P(X <= x)')
-  plt.xscale('log')
+  #plt.xscale('log')
+  plt.xlim(xmin=-0.01,xmax=0.2)
+  plt.ylim(ymax=1.1)
   x_values,cdf = getCdf(ht[0])
   plt.plot(x_values, cdf, label = 'Hubs')
   plt.savefig("cdf_hub.pdf")
@@ -136,7 +154,9 @@ def main():
   plt.title("CDF of Authorities values")
   plt.xlabel('Value')
   plt.ylabel('Y = P(X <= x)')
-  plt.xscale('log')
+  #plt.xscale('log')
+  plt.xlim(xmin=-0.01,xmax=0.2)
+  plt.ylim(ymax=1.1)
   x_values,cdf = getCdf(ht[1])
   plt.plot(x_values, cdf, label = 'Authorities')
   plt.savefig("cdf_auto.pdf")
