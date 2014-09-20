@@ -37,7 +37,7 @@ class DisjointSetForest{
       return parent;
     }
 
-    inline int getSetCount(){
+    inline int countSets(){
       return setCount;
     }
 

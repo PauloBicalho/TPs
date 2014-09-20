@@ -1,10 +1,30 @@
 #include <iostream>
-#include "DisjointSetForest.hpp"
+#include "Graph.hpp"
 
 int main(int argc, char * argv[]){
 
 
+
+  /* Graph Text --- Ok !
+  Graph g;
+
+  g.insertVertices(10);
+  g.insertEdge(1,2,2000,10);
+  g.insertEdge(1,3,20,1);
+  g.insertEdge(5,8,100,50);
+
+  std::cout << g.getNumberOfVertices() << std::endl;
+
+  std::vector<Edge> e = g.getEdges();
+  std::cout << e.size() << std::endl;
+
+  for(std::vector<Edge>::iterator it = e.begin(); it != e.end(); ++ it){
+    std::cout << it->first.first << " - " << it->first.second << " = ";
+    std::cout << "(" <<  it->second.first << "," << it->second.second << ")";
+    std::cout << std::endl;
+  }
   
+ // */
   
   /* DisjointSetFores Test --  OK!
   DisjointSetForest dsf (10);
