@@ -2,42 +2,56 @@
 
 float OptimizeSubGraph::optimize(){
 
-  Edges& e = g.getEdges();
+  const std::vector<Edge>& e = g.getEdges();
   std::pair<float,float> maxMin = findMaxMinRatio( e );
 
-  float max = maxMin.first;
-  float min = maxMin.second;
+  float max = maxMin.first + 1;
+  float min = 0;
   float guess = min + ( (max - min) / 2.0 );
 
-  float value = guess -1;
+  float bestValue = min;
 
+  while( max - min > 0.0001   ){
+    std::cout << "(Max,Min) = " << max << "," << min << std::endl;
 
-  while( value < guess ){
+    guess = min + ( (max - min) / 2.0 );
 
-    std::vector<WeightEdge>& weightEdges = transformEdges(e,guess);
-    value = MKruskal(weightEdges);
+    std::vector<WeightEdge> weightEdges = transformEdges(e,guess);
 
-    max = value;
+    float verify = MKruskal(weightEdges);
+    std::cout << guess << " = " << verify << std::endl;
+
+    if(verify == -1.000)
+      return verify;
+
+    if( verify >= 0 ){
+      min = guess;
+      bestValue = guess;
+    }
+    else
+      max = guess;
+
   }
 
-  return value;
+  return bestValue;
 }
 
 float OptimizeSubGraph::MKruskal( std::vector<WeightEdge> edges){
 
-  DisjointSetForest dsf (g.getNumberOfVertices);
+  DisjointSetForest dsf (g.getNumberOfVertices());
   std::sort(edges.begin(), edges.end());  //ascending order
 
   float value = 0.0;
   for(int i=edges.size()-1; i >= 0; i--){
     int v1 = edges[i].second.first;
-    int v2 = edges[i].second.first;
-    float w edges[i].first;
+    int v2 = edges[i].second.second;
+    float w =  edges[i].first;
 
-    v1Set = dsf.findSet(v1);
-    v2Set = dsf.findSet(v2);
+    int v1Set = dsf.findSet(v1);
+    int v2Set = dsf.findSet(v2);
 
-    if( v1 != v2 ){
+    if( v1Set != v2Set ){
+
       value += w;
       dsf.unionSet(v1,v2);
 
@@ -47,11 +61,11 @@ float OptimizeSubGraph::MKruskal( std::vector<WeightEdge> edges){
   }
 
   if( dsf.countSets() > 1 )
-    value = -1.000
+    value = -1.000;
   else{
     for(std::vector<WeightEdge>::iterator it=edges.begin(); it != edges.end(); ++it ){
-      if( it.first > 0 )
-        value += it.first;
+      if( it->first > 0 )
+        value += it->first;
     }
   }
 
@@ -59,7 +73,7 @@ float OptimizeSubGraph::MKruskal( std::vector<WeightEdge> edges){
 }
 
 
-std::vector<WeightEdge>& OptimizeSubGraph::transformEdges(std::vector<Edge> e, float r){
+std::vector<WeightEdge> OptimizeSubGraph::transformEdges(std::vector<Edge> e, float r){
   std::vector<WeightEdge> te; 
 
   for(std::vector<Edge>::iterator it = e.begin(); it != e.end(); ++ it){
@@ -70,10 +84,10 @@ std::vector<WeightEdge>& OptimizeSubGraph::transformEdges(std::vector<Edge> e, f
   return te;
 }
 
-std::pair<float,float> OptimizeSubGraph::findMaxMinRatio(std::vector<Edge>& e){
+std::pair<float,float> OptimizeSubGraph::findMaxMinRatio(const std::vector<Edge>& e){
   float max = 0,min = 9999999 ;
 
-  for(std::vector<Edge>::iterator it=e.begin(); it != e.end(); ++it){
+  for(std::vector<Edge>::const_iterator it=e.begin(); it != e.end(); ++it){
     float ratio = it->second.first / (float) it->second.second;
 
     if( ratio > max )

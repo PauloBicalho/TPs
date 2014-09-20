@@ -15,10 +15,10 @@ class OptimizeSubGraph{
   private:
     Graph & g;
 
-    std::pair<float,float> findMaxMinRatio(std::vector<Edge> & e);
+    std::pair<float,float> findMaxMinRatio(const std::vector<Edge> & e);
     float MKruskal( std::vector<WeightEdge> );
-    std::vector<WeightEdge>& transformEdges(std::vector<Edge> e, float r);
-}
+    std::vector<WeightEdge> transformEdges(std::vector<Edge> e, float r);
+};
 
 
 

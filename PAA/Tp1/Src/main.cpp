@@ -1,8 +1,28 @@
 #include <iostream>
+#include <cstdio>
 #include "Graph.hpp"
+#include "OptimizeSubGraph.hpp"
 
 int main(int argc, char * argv[]){
 
+  Graph g;
+  g.insertVertices(4);
+  g.insertEdge(0,1,6,5);
+  g.insertEdge(1,2,3,4);
+  g.insertEdge(2,3,5,2);
+  g.insertEdge(3,0,3,3);
+  
+  /*g.insertEdge(0,1,1,10);
+  g.insertEdge(1,2,3,3);
+  g.insertEdge(1,3,3,2);
+  g.insertEdge(2,3,3,1);
+  g.insertEdge(2,3,2,1);*/
+
+  OptimizeSubGraph osg (g);
+
+  float v = osg.optimize();
+
+  printf("%.3f", v);
 
 
   /* Graph Text --- Ok !
