@@ -12,14 +12,14 @@ float OptimizeSubGraph::optimize(){
   float bestValue = min;
 
   while( max - min > 0.0001   ){
-    std::cout << "(Max,Min) = " << max << "," << min << std::endl;
+    //std::cout << "(Max,Min) = " << max << "," << min << std::endl;
 
     guess = min + ( (max - min) / 2.0 );
 
     std::vector<WeightEdge> weightEdges = transformEdges(e,guess);
 
     float verify = MKruskal(weightEdges);
-    std::cout << guess << " = " << verify << std::endl;
+    //std::cout << guess << " = " << verify << std::endl;
 
     if(verify == -1.000)
       return verify;
