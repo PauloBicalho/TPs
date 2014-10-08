@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall -g
 LDFLAGS=
-SOURCES=main.cpp Graph.cpp
+SOURCES=main.cpp Graph.cpp Io.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=tp2.out
 
@@ -13,6 +13,6 @@ $(EXECUTABLE): $(OBJECTS)
 .cpp.o:
 		$(CC) $(CFLAGS) $< -o $@
 
-clear:
-		rm *.o $(EXECUTABLE);
+clean:
+		@$(RM) *.o $(EXECUTABLE);
 

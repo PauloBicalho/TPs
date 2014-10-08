@@ -1,49 +1,59 @@
 #include "Graph.hpp"
 
-std::stack<int> * Graph::dfs(bool transpose=false, int start=-1, bool findSCC=false){
-  std::stack<int> * s = new std::stack<int> ();
-  
-  for( int i=0; i<numberOfVertices; i++ ){
+std::vector<int> * Graph::dfs( bool transpose=false, bool undirect=false, std::vector<int> * rOrder=NULL){
+ 
+  int size = numberOfVertices;
+  for(int i=0; i<size; i++){
     colors[i] = 0;
-    dfs_parent[i] = -1;
+    dfsParent[i] = -1;
+    dfsDiscoveredId[i] = -1;
   }
-        
-  if(start == -1){
-    for( int i=0; i<numberOfVertices; i++ ){
-      if( colors[i] == 0 )
-        dfs_visit(i,*s,transpose,findSCC);
+
+  std::vector<int> * finishTime = new std::vector<int> ();
+
+  int dfsId = -1;
+  for(int i=0; i<size; i++){
+    int node = i;
+
+    if( rOrder != NULL ) { node = rOrder->at( size - i -1); }
+    
+    if( colors[node] == 0 ){
+  //    std::cout << "Dfs a partir de: " << node+1 << "\n";
+      dfsId++;
+      dfsDiscoveredId[node] = dfsId;
+      dfs_visit(dfsId,node, finishTime, transpose, undirect);
     }
-  } else{
-    dfs_visit(start,*s,transpose,findSCC);
   }
-  
-  return s;
+  numberOfSCCs = dfsId+1;
+  return finishTime;
 }
 
-void Graph::dfs_visit(int u,std::stack<int> & s,bool transpose=false,bool findSCC=false){
-  colors[u] = 1;
-  
-  if(transpose){
-    for(unsigned j =0; j<AdjT[u].size(); j++){
-      int v = AdjT[u][j];
-      if( colors[v] == 0 and (not findSCC or nodeSCC[v] == -1 ) ){
-        dfs_parent[v] = u;
-        dfs_visit(v, s, transpose);
-      } 
-    } 
-  } else {
-    for(unsigned j =0; j<Adj[u].size(); j++){
-      int v = Adj[u][j];
-      //if( colors[v] == 0 ){
-      if( colors[v] == 0 and ( !findSCC or nodeSCC[v] == -1 ) ){
-        dfs_parent[v] = u;
-        dfs_visit(v, s, transpose);
-      } 
-    } 
-  } 
-  
-  colors[u] = 2;
-  s.push(u);
+void Graph::dfs_visit(int dfsId, int nodeU, std::vector<int> * finishTime, bool transpose, bool undirect){
+  colors[nodeU] = 1;
+
+  if( transpose or undirect){
+    for(unsigned j=0; j<AdjT[nodeU].size(); j++){
+      int nodeV = AdjT[nodeU][j];
+      if( colors[nodeV] == 0 ){
+        dfsParent[nodeV] = nodeU;
+        dfsDiscoveredId[nodeV] = dfsId;
+        dfs_visit(dfsId,nodeV,finishTime,transpose,undirect);
+      }
+    }
+  }
+  if( (!transpose) or undirect ){
+    for(unsigned j=0; j<Adj[nodeU].size(); j++){
+      int nodeV = Adj[nodeU][j];
+      if( colors[nodeV] == 0 ){
+        dfsParent[nodeV] = nodeU;
+        dfsDiscoveredId[nodeV] = dfsId;
+        dfs_visit(dfsId,nodeV,finishTime,transpose,undirect);
+      }
+    }
+  }
+
+  colors[nodeU] = 2;
+  finishTime->push_back(nodeU);
 }
 
 void Graph::findSCCs(){
@@ -51,105 +61,119 @@ void Graph::findSCCs(){
   this->bSCC = -1;
   this->numberOfSCCs = 0;
 
-  finishStack = dfs(false);
+  std::vector<int> * finishTime = dfs();
+  dfs(true,false,finishTime);
+  delete finishTime;
 
-  for(int i=0; i<numberOfVertices; i++)
-    nodeSCC[i] = -1;
 
-  int size = finishStack->size();
-  for( int i = 0; i<size; i++ ){
-    int node = finishStack->top();
-    finishStack->pop();
+  std::vector<int> sccsSize (numberOfSCCs,0);
+  sizeBSCC = 0;
+  bSCC = -1;
+
+ // std::cout << "\n";
+  for(int i=0; i<numberOfVertices; i++){
+    int sccId = dfsDiscoveredId[i];
+    nodeSCC[i] = sccId;
+   // std::cout << sccId << " ";
     
-    if( nodeSCC[node] == -1 )
-      findNodeSCC(node); 
-  }   
-  
-  std::cout << "\n";
-  for(unsigned i=0; i<nodeSCC.size(); i++)
-    std::cout << nodeSCC[i] << " ";
-  std::cout << "\n";
+    sccsSize[sccId]++;
+
+    if( sccsSize[sccId] > sizeBSCC ){
+      sizeBSCC = sccsSize[sccId];
+      bSCC = sccId;
+    }
+  }
+ // std::cout << "\n";
+
+
 } 
 
-void Graph::findNodeSCC(int node){
-  this->numberOfSCCs++;
-  std::stack<int> * scc = dfs(true,node,true);
-  int size = scc->size();
-  
-  if( size > this->sizeBSCC ){
-    this->bSCC = this->numberOfSCCs-1;
-    this->sizeBSCC = size;
-  } 
-    
-  for( int i = 0; i<size; i++ ){
-    int n = scc->top();
-    scc->pop();
-    nodeSCC[n] = this->numberOfSCCs-1;
-  } 
-    
-}   
-
-
-Graph Graph::getCompactGraph(){
-  Graph compact (numberOfSCCs);
+Graph * Graph::getCompactGraph(){
+  Graph * compact = new Graph (numberOfSCCs);
 
   for(int i=0; i<numberOfVertices; i++){
     int sccI = nodeSCC[i];
 
-    for(int j=0; j<Adj[i].size(); j++){
+    for(unsigned j=0; j<Adj[i].size(); j++){
       int vj = Adj[i][j];
 
       int sccJ = nodeSCC[vj];
 
-      compact.safeAddEdge(sccI, sccJ);
+      compact->safeAddEdge(sccI, sccJ);
     }
   }
-  compact.setNodeType(bSCC, SCC);
-  compact.setBSCC( bSCC );
+  compact->setNodeType(bSCC, SCC);
+  compact->setBSCC( bSCC );
 
   std::cout << "\n";
 
   return compact;
 }
 
-void Graph::markNodes( std::stack< int > * nodes, NodeType type ){
-  int size = nodes->size();
-  for(int i=0; i<size; i++){
-    int n = nodes->top();
-    nodes->pop();
+bool Graph::markNode(int n, NodeType type){
+    if( nodesType[n] == type )
+      return true;
 
-    if( nodesTypes[n] == type )
-      continue;
+    else if( nodesType[n] == DISC )
+      nodesType[n] = type;
 
-    else if( nodesTypes[n] == DISC )
-      nodesTypes[n] = type;
-
-    else if( nodesTypes[n] == TA and type == TB )
-      nodesTypes[n] = TUBE;
+    else if( nodesType[n] == TA and type == TB )
+      nodesType[n] = TUBE;
     
-    else if( nodesTypes[n] == TB and type == TA )
-      nodesTypes[n] = TUBE;
-      
-  }
+    else if( nodesType[n] == TB and type == TA )
+      nodesType[n] = TUBE;
+    else
+      return false;
+
+    return true;
 }
+
+//possivel erro, nao visita todos os nos (problema no if interno)
+void Graph::markDfs(NodeType type, int nodeU, bool transpose=false, bool undirect=false){
+
+  colors[nodeU] = 1;
+  if( transpose or undirect){
+    for(unsigned j=0; j<AdjT[nodeU].size(); j++){
+      int nodeV = AdjT[nodeU][j];
+      if( colors[nodeV] == 0 and markNode(nodeV,type) ){
+        markDfs(type,nodeV,transpose,undirect);
+      }  
+    }
+  }
+  if( (!transpose) or undirect ){
+    for(unsigned j=0; j<Adj[nodeU].size(); j++){
+      int nodeV = Adj[nodeU][j];
+      if( colors[nodeV] == 0 and markNode(nodeV,type) ){
+        markDfs(type,nodeV,transpose,undirect);
+      }
+    }
+  }
+
+  colors[nodeU] = 2;
+}
+
+void Graph::resetColors(){
+  for(int i=0; i<numberOfVertices; i++)
+    colors[i] = 0;
+}
+
 
 void Graph::findNodesTypes(){
-  std::stack< int > * reached = dfs(false,bSCC, false);
-  markNodes( reached, OUT );
 
-  std::stack< int > * reaches = dfs(true ,bSCC, false);
-  markNodes( reaches, IN );
+  markDfs(OUT, bSCC);
+  resetColors();
+  markDfs(IN, bSCC, true);
+  resetColors();
 
-  for(int i=0; i<nuberOfVertices; i++){
-    if( nodesTypes[i] == IN ){
-      std::stack< int > * reachedFromIn = dfs(false,i, false);
-      markNodes( reachedFromIn, TA );
-    }
-    
-    if( nodesTypes[i] == OUT ){
-      std::stack< int > * reachesOut = dfs(false,i, false);
-      markNodes( reachesOut, TB );
+  for(int i=0; i<numberOfVertices; i++){
+    if( nodesType[i] == IN ){
+      markDfs(TA, i, false, true);
+      resetColors();
+    } else if (nodesType[i] == OUT){
+      markDfs(TB, i, true, true);
+      resetColors();
     }
   }
-
+  
 }
+
