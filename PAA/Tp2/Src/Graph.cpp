@@ -112,7 +112,7 @@ Graph * Graph::getCompactGraph(){
 
 bool Graph::markNode(int n, NodeType type){
     if( nodesType[n] == type )
-      return true;
+      return false;
 
     else if( nodesType[n] == DISC )
       nodesType[n] = type;
@@ -131,11 +131,12 @@ bool Graph::markNode(int n, NodeType type){
 //possivel erro, nao visita todos os nos (problema no if interno)
 void Graph::markDfs(NodeType type, int nodeU, bool transpose=false, bool undirect=false){
 
-  colors[nodeU] = 1;
+//  colors[nodeU] = 1;
   if( transpose or undirect){
     for(unsigned j=0; j<AdjT[nodeU].size(); j++){
       int nodeV = AdjT[nodeU][j];
-      if( colors[nodeV] == 0 and markNode(nodeV,type) ){
+  //    if( colors[nodeV] == 0 and markNode(nodeV,type) ){
+      if(  markNode(nodeV,type) ){
         markDfs(type,nodeV,transpose,undirect);
       }  
     }
@@ -143,13 +144,14 @@ void Graph::markDfs(NodeType type, int nodeU, bool transpose=false, bool undirec
   if( (!transpose) or undirect ){
     for(unsigned j=0; j<Adj[nodeU].size(); j++){
       int nodeV = Adj[nodeU][j];
-      if( colors[nodeV] == 0 and markNode(nodeV,type) ){
+      //if( colors[nodeV] == 0 and markNode(nodeV,type) ){
+      if(  markNode(nodeV,type) ){
         markDfs(type,nodeV,transpose,undirect);
       }
     }
   }
 
-  colors[nodeU] = 2;
+//  colors[nodeU] = 2;
 }
 
 void Graph::resetColors(){
@@ -161,17 +163,17 @@ void Graph::resetColors(){
 void Graph::findNodesTypes(){
 
   markDfs(OUT, bSCC);
-  resetColors();
+  //resetColors();
   markDfs(IN, bSCC, true);
-  resetColors();
+ // resetColors();
 
   for(int i=0; i<numberOfVertices; i++){
     if( nodesType[i] == IN ){
       markDfs(TA, i, false, true);
-      resetColors();
+     // resetColors();
     } else if (nodesType[i] == OUT){
       markDfs(TB, i, true, true);
-      resetColors();
+     // resetColors();
     }
   }
   
