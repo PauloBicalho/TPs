@@ -20,16 +20,17 @@ bool readLine(int & v1,int &v2,int &f,int &d ){
 
 int main(int argc, char * argv[]){
 
-
   Graph * g;
   do{
     g = new Graph();
 
-    int number_of_vertices;
-    char line[256];
+    int number_of_vertices = -1;
+    char line[256]= "-1";
 
     std::cin.getline(line,256);
     sscanf(line, "%d", &number_of_vertices);
+
+    if( number_of_vertices == -1 ) break;
 
     g->insertVertices(number_of_vertices);
 
@@ -42,6 +43,7 @@ int main(int argc, char * argv[]){
     float v = osg.optimize();
     printf("%.3f\n", v);
 
+    delete g;
   } while( std::cin );
 
   
