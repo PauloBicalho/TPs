@@ -25,6 +25,7 @@ int main(int argc, char *argv[]){
   }
 
   ga.calcDistances();
+  ga.calcFitness(1);
 
   
   return 0;

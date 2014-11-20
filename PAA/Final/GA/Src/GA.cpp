@@ -25,11 +25,11 @@ void GA::calcDistances(){
   for(int i=0; i<numPoints-1; i++){
     std::vector< double > ds;
     for(int j=i+1; j<numPoints; j++){
-      int x1 = this->points[i].first.first;
-      int y1 = this->points[i].first.second;
+      int x1 = this->points[i].x;
+      int y1 = this->points[i].y;
       
-      int x2 = this->points[j].first.first;
-      int y2 = this->points[j].first.second;
+      int x2 = this->points[j].x;
+      int y2 = this->points[j].y;
 
       double d = sqrt( pow(x1-x2,2) + pow(y1-y2,2) );
 
@@ -113,6 +113,49 @@ int GA::selectParent(int size){
 
 
   return bestIndex;
+}
+
+std::vector< int > GA::getPriorityByDemand(){
+  std::vector< int > priority  (numPoints);
+
+  for(int i = 0; i<numPoints; i++)
+//    std::cout << priority[i] << "\n";
+    priority[i] = i;
+
+  sort(priority.begin(),
+      priority.end(),
+      [&](const int & p1, const int & p2) -> bool
+      {
+      return points[p1].demand > points[p2].demand;
+      });
+
+  return priority;
+}
+
+
+void GA::calcFitness(int mode){
+  
+  for(int i=0; i<populationSize; i++){
+    std::vector< int > capacities (medians);
+
+    for(int p=0; p<medians; p++){
+      capacities[p] = getCapacity( pop[i][p] );
+    }
+
+    std::vector<int> priority;
+    if( mode == 1 )
+      priority = getPriorityByDemand();
+    else
+      priority = getPriorityByDemand();
+
+    for( int j = 0; j< priority.size(); j++ ){
+      //assignToClosest( priority[j], pop[i], capacities );
+      std::cout << priority[j] << " \n";
+      continue;
+    }
+  
+  }
+
 }
 
 
